@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Plantilla de presentación HTML interactiva" />
+    <title>Presentación interactiva</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="presentation" aria-label="Presentación interactiva">
+      <div class="progress" aria-hidden="true">
+        <span id="progress-bar"></span>
+      </div>
+
+      <header class="topbar">
+        <a class="brand" href="#1" aria-label="Ir a la portada">
+          <span class="brand-mark">AI</span>
+          <span class="brand-name">Artificial Intelligence</span>
+        </a>
+
+        <div class="topbar-actions">
+          <span id="slide-counter" class="slide-counter" aria-live="polite">01 / 06</span>
+          <button id="overview-button" class="icon-button" type="button" aria-label="Ver todas las diapositivas" title="Vista general (O)">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <rect x="4" y="4" width="6" height="6" rx="1"></rect>
+              <rect x="14" y="4" width="6" height="6" rx="1"></rect>
+              <rect x="4" y="14" width="6" height="6" rx="1"></rect>
+              <rect x="14" y="14" width="6" height="6" rx="1"></rect>
+            </svg>
+          </button>
+          <button id="fullscreen-button" class="icon-button" type="button" aria-label="Activar pantalla completa" title="Pantalla completa (F)">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M8 3H3v5M16 3h5v5M8 21H3v-5M16 21h5v-5"></path>
+            </svg>
+          </button>
+        </div>
+      </header>
+
+      <div id="slides" class="slides">
+        <!-- DUPLICA una sección .slide para crear nuevas diapositivas. -->
+        <section class="slide title-slide is-active" data-title="Portada" aria-hidden="false">
+          <div class="slide-content title-layout">
+            <div>
+              <p class="eyebrow">QUIZ 01 · 2026</p>
+              <h1>Inteligencia<br /><span>Artificial</span></h1>
+              <p class="lead">Una presentación interactiva sobre ideas, modelos y aplicaciones.</p>
+            </div>
+
+            <div class="title-meta">
+              <div>
+                <span>Presentado por</span>
+                <strong>Tu nombre</strong>
+              </div>
+              <div>
+                <span>Curso</span>
+                <strong>Nombre del curso</strong>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="slide" data-title="Idea principal" aria-hidden="true">
+          <div class="slide-content split-layout">
+            <div>
+              <p class="eyebrow">01 · CONTEXTO</p>
+              <h2>Una idea principal,<br /><span>explicada con claridad.</span></h2>
+              <p class="body-copy">Usa este espacio para introducir el concepto central. Mantén cada diapositiva enfocada en una sola idea y deja que la explicación oral aporte el detalle.</p>
+            </div>
+
+            <aside class="quote-card">
+              <span class="quote-mark">“</span>
+              <blockquote>La simplicidad es la máxima sofisticación.</blockquote>
+              <cite>— Leonardo da Vinci</cite>
+            </aside>
+          </div>
+        </section>
+
+        <section class="slide" data-title="Tres conceptos" aria-hidden="true">
+          <div class="slide-content">
+            <p class="eyebrow">02 · FUNDAMENTOS</p>
+            <h2>Tres conceptos <span>esenciales</span></h2>
+
+            <div class="card-grid">
+              <article class="info-card">
+                <span class="card-number">01</span>
+                <h3>Datos</h3>
+                <p>La evidencia que permite encontrar patrones y entrenar modelos.</p>
+              </article>
+              <article class="info-card accent-card">
+                <span class="card-number">02</span>
+                <h3>Modelo</h3>
+                <p>Una representación que aprende relaciones para generar predicciones.</p>
+              </article>
+              <article class="info-card">
+                <span class="card-number">03</span>
+                <h3>Decisión</h3>
+                <p>El resultado que conecta el aprendizaje con una aplicación real.</p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="slide" data-title="Proceso" aria-hidden="true">
+          <div class="slide-content">
+            <p class="eyebrow">03 · PROCESO</p>
+            <h2>De los datos al <span>resultado</span></h2>
+
+            <ol class="process-list">
+              <li>
+                <span class="process-number">1</span>
+                <div><strong>Observar</strong><small>Recolectar y comprender los datos.</small></div>
+              </li>
+              <li>
+                <span class="process-number">2</span>
+                <div><strong>Aprender</strong><small>Ajustar el modelo a los patrones.</small></div>
+              </li>
+              <li>
+                <span class="process-number">3</span>
+                <div><strong>Evaluar</strong><small>Medir precisión, sesgos y límites.</small></div>
+              </li>
+              <li>
+                <span class="process-number">4</span>
+                <div><strong>Aplicar</strong><small>Convertir la predicción en valor.</small></div>
+              </li>
+            </ol>
+          </div>
+        </section>
+
+        <section class="slide" data-title="Pregunta" aria-hidden="true">
+          <div class="slide-content quiz-layout">
+            <div>
+              <p class="eyebrow">04 · INTERACCIÓN</p>
+              <h2>Pregunta para la <span>audiencia</span></h2>
+              <p class="question">¿Cuál es el elemento más importante para que un sistema de IA sea confiable?</p>
+            </div>
+
+            <div class="answers" role="group" aria-label="Opciones de respuesta">
+              <button class="answer" type="button" data-feedback="Los datos son esenciales, pero también deben evaluarse el modelo y su contexto.">
+                <span>A</span> Una gran cantidad de datos
+              </button>
+              <button class="answer" type="button" data-correct="true" data-feedback="¡Correcto! La evaluación continua integra calidad, contexto, desempeño y riesgos.">
+                <span>B</span> La evaluación continua
+              </button>
+              <button class="answer" type="button" data-feedback="La complejidad no garantiza confiabilidad; a menudo dificulta explicar el resultado.">
+                <span>C</span> El modelo más complejo
+              </button>
+              <p id="quiz-feedback" class="quiz-feedback" aria-live="polite">Selecciona una respuesta.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="slide end-slide" data-title="Cierre" aria-hidden="true">
+          <div class="slide-content end-layout">
+            <p class="eyebrow">CONCLUSIÓN</p>
+            <h2>Gracias.</h2>
+            <p class="lead">¿Preguntas o comentarios?</p>
+            <a class="contact-link" href="mailto:tu.nombre@email.com">tu.nombre@email.com</a>
+          </div>
+        </section>
+      </div>
+
+      <nav class="controls" aria-label="Navegación entre diapositivas">
+        <button id="previous-button" class="nav-button" type="button" aria-label="Diapositiva anterior">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 18-6-6 6-6"></path></svg>
+        </button>
+        <div id="slide-dots" class="slide-dots" aria-label="Seleccionar diapositiva"></div>
+        <button id="next-button" class="nav-button next-button" type="button" aria-label="Diapositiva siguiente">
+          <span>Siguiente</span>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg>
+        </button>
+      </nav>
+    </main>
+
+    <div id="overview" class="overview" aria-hidden="true">
+      <div class="overview-header">
+        <div>
+          <p class="eyebrow">NAVEGACIÓN</p>
+          <h2>Todas las diapositivas</h2>
+        </div>
+        <button id="close-overview" class="close-button" type="button" aria-label="Cerrar vista general">×</button>
+      </div>
+      <div id="overview-grid" class="overview-grid"></div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
