@@ -1,0 +1,7 @@
+# macOS
+.DS_Store
+
+# Dependencias y archivos temporales
+node_modules/
+*.log
+
