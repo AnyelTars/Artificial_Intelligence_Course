@@ -9,8 +9,14 @@ const overviewGrid = document.querySelector("#overview-grid");
 const overviewButton = document.querySelector("#overview-button");
 const closeOverviewButton = document.querySelector("#close-overview");
 const fullscreenButton = document.querySelector("#fullscreen-button");
+const paperModal = document.querySelector("#paper-modal");
+const paperDialogTitle = document.querySelector("#paper-dialog-title");
+const paperDialogAward = document.querySelector("#paper-dialog-award");
+const paperDialogContent = document.querySelector("#paper-dialog-content");
+const closePaperModalButton = document.querySelector("#close-paper-modal");
 
 let currentSlide = getSlideFromHash();
+let lastPaperTrigger = null;
 
 function getSlideFromHash() {
   const requestedSlide = Number(window.location.hash.slice(1));
@@ -85,6 +91,27 @@ function closeOverview() {
   overviewButton.focus();
 }
 
+function openPaperDetails(trigger) {
+  const template = document.querySelector(`#paper-${trigger.dataset.paperModal}-template`);
+  if (!template) return;
+
+  lastPaperTrigger = trigger;
+  paperDialogTitle.textContent = trigger.dataset.paperTitle;
+  paperDialogAward.textContent = trigger.dataset.paperAward;
+  paperDialogContent.replaceChildren(template.content.cloneNode(true));
+  paperDialogContent.scrollTop = 0;
+  paperModal.classList.add("is-open");
+  paperModal.setAttribute("aria-hidden", "false");
+  closePaperModalButton.focus();
+}
+
+function closePaperDetails() {
+  paperModal.classList.remove("is-open");
+  paperModal.setAttribute("aria-hidden", "true");
+  paperDialogContent.replaceChildren();
+  lastPaperTrigger?.focus();
+}
+
 async function toggleFullscreen() {
   try {
     if (!document.fullscreenElement) {
@@ -102,6 +129,15 @@ nextButton.addEventListener("click", () => goToSlide(currentSlide + 1));
 overviewButton.addEventListener("click", openOverview);
 closeOverviewButton.addEventListener("click", closeOverview);
 fullscreenButton.addEventListener("click", toggleFullscreen);
+closePaperModalButton.addEventListener("click", closePaperDetails);
+
+document.querySelectorAll("[data-paper-modal]").forEach((trigger) => {
+  trigger.addEventListener("click", () => openPaperDetails(trigger));
+});
+
+paperModal.addEventListener("click", (event) => {
+  if (event.target === paperModal) closePaperDetails();
+});
 
 document.addEventListener("fullscreenchange", () => {
   const isFullscreen = Boolean(document.fullscreenElement);
@@ -109,12 +145,17 @@ document.addEventListener("fullscreenchange", () => {
 });
 
 document.addEventListener("keydown", (event) => {
-  if (event.target.matches("button, a, input, textarea, select")) return;
+  if (paperModal.classList.contains("is-open")) {
+    if (event.key === "Escape") closePaperDetails();
+    return;
+  }
 
   if (overview.classList.contains("is-open")) {
     if (event.key === "Escape" || event.key.toLowerCase() === "o") closeOverview();
     return;
   }
+
+  if (event.target.matches("button, a, input, textarea, select")) return;
 
   if (["ArrowRight", "ArrowDown", "PageDown", " "].includes(event.key)) {
     event.preventDefault();
@@ -152,6 +193,7 @@ document.addEventListener("touchstart", (event) => {
 }, { passive: true });
 
 document.addEventListener("touchend", (event) => {
+  if (paperModal.classList.contains("is-open") || overview.classList.contains("is-open")) return;
   const distance = event.changedTouches[0].screenX - touchStartX;
   if (Math.abs(distance) < 60) return;
   goToSlide(currentSlide + (distance < 0 ? 1 : -1));

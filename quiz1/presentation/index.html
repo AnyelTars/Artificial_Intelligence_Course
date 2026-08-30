@@ -20,7 +20,7 @@
         </a>
 
         <div class="topbar-actions">
-          <span id="slide-counter" class="slide-counter" aria-live="polite">01 / 06</span>
+          <span id="slide-counter" class="slide-counter" aria-live="polite">01 / 27</span>
           <button id="overview-button" class="icon-button" type="button" aria-label="Ver todas las diapositivas" title="Vista general (O)">
             <svg viewBox="0 0 24 24" aria-hidden="true">
               <rect x="4" y="4" width="6" height="6" rx="1"></rect>
@@ -482,6 +482,307 @@
           </div>
         </section>
 
+        <section class="slide" data-title="Lessons from 2025" aria-hidden="true">
+          <div class="slide-content research-slide">
+            <div class="section-heading">
+              <div>
+                <p class="eyebrow">07 · BRAINSTORMING</p>
+                <h2>What did <span>2025</span> teach us?</h2>
+              </div>
+              <p class="section-summary">Different representations, one recurring strategy: do not accept the first answer—refine it.</p>
+            </div>
+
+            <div class="approach-grid">
+              <button class="approach-card paper-button" type="button" data-paper-modal="trm" data-paper-title="Tiny Recursion Model" data-paper-award="1st Paper Award" aria-haspopup="dialog">
+                <div class="award-line"><span>1st Paper Award</span><strong>TRM</strong></div>
+                <h3>Recursive reasoning</h3>
+                <div class="mini-approach-flow" aria-label="TRM recursive refinement">
+                  <span>state</span><b>→</b><span>refine</span><b>↻</b><span>answer</span>
+                </div>
+                <p>A tiny network repeatedly improves a latent state and its current answer.</p>
+                <span class="explore-label">Explore algorithm <b>↗</b></span>
+              </button>
+
+              <button class="approach-card paper-button" type="button" data-paper-modal="soar" data-paper-title="SOAR" data-paper-award="2nd Paper Award" aria-haspopup="dialog">
+                <div class="award-line"><span>2nd Paper Award</span><strong>SOAR</strong></div>
+                <h3>Evolutionary search</h3>
+                <div class="mini-approach-flow" aria-label="SOAR evolutionary search">
+                  <span>generate</span><b>→</b><span>score</span><b>↻</b><span>learn</span>
+                </div>
+                <p>An LLM generates and refines programs, then learns from its own search traces.</p>
+                <span class="explore-label">Explore algorithm <b>↗</b></span>
+              </button>
+
+              <button class="approach-card paper-button" type="button" data-paper-modal="compressarc" data-paper-title="CompressARC" data-paper-award="3rd Paper Award" aria-haspopup="dialog">
+                <div class="award-line"><span>3rd Paper Award</span><strong>CompressARC</strong></div>
+                <h3>Compression as reasoning</h3>
+                <div class="mini-approach-flow" aria-label="CompressARC minimum description length">
+                  <span>puzzle</span><b>→</b><span>short code</span><b>→</b><span>output</span>
+                </div>
+                <p>Minimum Description Length favors compact explanations trained on one puzzle.</p>
+                <span class="explore-label">Explore algorithm <b>↗</b></span>
+              </button>
+
+              <button class="approach-card paper-button featured-approach" type="button" data-paper-modal="arcnca" data-paper-title="ARC-NCA" data-paper-award="Paper Award Runner-Up · Our focus" aria-haspopup="dialog">
+                <div class="award-line"><span>Paper Award Runner-Up</span><strong>ARC-NCA</strong></div>
+                <h3>Developmental dynamics</h3>
+                <div class="mini-approach-flow" aria-label="ARC-NCA local-to-global dynamics">
+                  <span>local rule</span><b>→</b><span>iterate</span><b>→</b><span>pattern</span>
+                </div>
+                <p>Learned local interactions produce an emergent global grid transformation.</p>
+                <span class="explore-label">Explore algorithm <b>↗</b></span>
+              </button>
+            </div>
+
+            <div class="insight-strip">
+              <span>Shared principle</span>
+              <strong>Generate a hypothesis → test it → use the error → refine</strong>
+              <a class="source-link" href="https://arcprize.org/blog/arc-prize-2025-results-analysis" target="_blank" rel="noreferrer">ARC Prize 2025 ↗</a>
+            </div>
+          </div>
+        </section>
+
+        <section class="slide" data-title="How ARC-NCA works" aria-hidden="true">
+          <div class="slide-content research-split">
+            <div class="hypothesis-copy">
+              <p class="eyebrow">08 · OUR FOCUS</p>
+              <h2>How does<br /><span>ARC-NCA work?</span></h2>
+              <p class="body-copy">For every ARC problem, the system trains a new cellular automaton from its 2–3 demonstrations. A shared neural rule updates every cell using local information.</p>
+
+              <div class="equation-block" aria-label="Cell update equation">
+                <span>s<sub>i</sub>(t + 1)</span>
+                <b>=</b>
+                <span>F<sub>θ</sub>(s<sub>i</sub>(t), neighbors)</span>
+              </div>
+              <div class="state-legend">
+                <span><i class="visible-state"></i><strong>Visible state</strong> predicted color</span>
+                <span><i class="hidden-state"></i><strong>Hidden state</strong> local memory</span>
+              </div>
+            </div>
+
+            <div class="dynamics-panel">
+              <div class="dynamics-heading">
+                <span>Developmental computation</span>
+                <strong>One rule, many cells</strong>
+              </div>
+
+              <!-- Optional asset slot: replace this diagram with an inline GIF by following the README instructions. -->
+              <div class="nca-evolution" aria-label="Conceptual cellular automata evolution">
+                <div class="nca-frame">
+                  <small>t = 0</small>
+                  <div class="cell-grid">
+                    <i></i><i></i><i></i><i></i><i class="cell-a"></i><i></i><i></i><i></i><i></i>
+                  </div>
+                </div>
+                <span class="evolution-arrow">→</span>
+                <div class="nca-frame">
+                  <small>t = 2</small>
+                  <div class="cell-grid">
+                    <i></i><i class="cell-a"></i><i></i><i class="cell-a"></i><i class="cell-b"></i><i class="cell-a"></i><i></i><i class="cell-a"></i><i></i>
+                  </div>
+                </div>
+                <span class="evolution-arrow">→</span>
+                <div class="nca-frame">
+                  <small>t = T</small>
+                  <div class="cell-grid">
+                    <i class="cell-a"></i><i class="cell-a"></i><i class="cell-a"></i><i class="cell-a"></i><i class="cell-b"></i><i class="cell-a"></i><i class="cell-a"></i><i class="cell-a"></i><i class="cell-a"></i>
+                  </div>
+                </div>
+              </div>
+
+              <div class="concept-chain">
+                <span>Encode grid</span><b>↓</b><span>Repeat local updates</span><b>↓</b><span>Decode colors</span>
+              </div>
+              <a class="source-link" href="https://etimush.github.io/ARC_NCA/" target="_blank" rel="noreferrer">ARC-NCA project ↗</a>
+            </div>
+          </div>
+        </section>
+
+        <section class="slide" data-title="Proposed NCA solver" aria-hidden="true">
+          <div class="slide-content research-slide">
+            <div class="section-heading">
+              <div>
+                <p class="eyebrow">09 · PRELIMINARY STRATEGY</p>
+                <h2>The <span>NCA solver</span></h2>
+              </div>
+              <p class="section-summary">Train a small, task-specific dynamical rule from the demonstrations, then verify its behavior exactly.</p>
+            </div>
+
+            <div class="solver-pipeline" aria-label="Proposed ARC-NCA solver flowchart">
+              <article class="pipeline-step">
+                <span>01</span>
+                <strong>Demonstrations</strong>
+                <small>Input-output pairs</small>
+              </article>
+              <i aria-hidden="true">→</i>
+              <article class="pipeline-step">
+                <span>02</span>
+                <strong>Cell state</strong>
+                <small>Color + hidden memory</small>
+              </article>
+              <i aria-hidden="true">→</i>
+              <article class="pipeline-step active-step">
+                <span>03</span>
+                <strong>Learn F<sub>θ</sub></strong>
+                <small>New NCA per task</small>
+              </article>
+              <i aria-hidden="true">→</i>
+              <article class="pipeline-step">
+                <span>04</span>
+                <strong>Roll out</strong>
+                <small>Multiple T and seeds</small>
+              </article>
+              <i aria-hidden="true">→</i>
+              <article class="pipeline-step">
+                <span>05</span>
+                <strong>Verify</strong>
+                <small>Exact match on all examples</small>
+              </article>
+            </div>
+
+            <div class="training-objective">
+              <div>
+                <span>Task-time objective</span>
+                <strong>θ* = arg min<sub>θ</sub> Σ<sub>k</sub> L(Decode(S<sub>θ</sub><sup>T</sup>(X<sub>k</sub>)), Y<sub>k</sub>)</strong>
+              </div>
+              <div class="test-transfer">
+                <span>Then transfer the learned rule</span>
+                <strong>S<sub>θ*</sub><sup>T</sup>(X<sub>test</sub>) → Ŷ<sub>test</sub></strong>
+              </div>
+            </div>
+
+            <p class="slide-note">Key safeguard: keep intermediate states as candidates—the final stable state is not always the exact answer.</p>
+          </div>
+        </section>
+
+        <section class="slide" data-title="Hybrid strategy" aria-hidden="true">
+          <div class="slide-content research-slide">
+            <p class="eyebrow">10 · SCIENTIFIC CAUTION</p>
+            <h2>Where can NCA <span>help—or fail?</span></h2>
+
+            <div class="balance-grid">
+              <article class="balance-card strength-card">
+                <span class="balance-label">PROMISING FOR</span>
+                <ul>
+                  <li><strong>Growth</strong><small>Extend shapes and patterns step by step.</small></li>
+                  <li><strong>Propagation</strong><small>Connect points and transmit spatial information.</small></li>
+                  <li><strong>Filling</strong><small>Respect boundaries through local interactions.</small></li>
+                </ul>
+              </article>
+
+              <article class="balance-card limit-card">
+                <span class="balance-label">OPEN CHALLENGES</span>
+                <ul>
+                  <li><strong>Global relations</strong><small>Counting and object-level composition.</small></li>
+                  <li><strong>Changing size</strong><small>The lattice cannot naturally resize itself.</small></li>
+                  <li><strong>Exactness</strong><small>One unstable or incorrect pixel means failure.</small></li>
+                </ul>
+              </article>
+            </div>
+
+            <div class="hybrid-architecture" aria-label="Proposed hybrid system">
+              <span class="hybrid-label">Our hybrid direction</span>
+              <div class="hybrid-flow">
+                <strong>Object analysis</strong><i>+</i><strong>NCA candidate generation</strong><i>+</i><strong>Exact symbolic verifier</strong><b>→</b><strong class="hybrid-output">Final output</strong>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="slide" data-title="Research roadmap" aria-hidden="true">
+          <div class="slide-content research-slide">
+            <div class="section-heading">
+              <div>
+                <p class="eyebrow">11 · RESEARCH ROADMAP</p>
+                <h2>How will we <span>test the idea?</span></h2>
+              </div>
+              <p class="section-summary">Start with a falsifiable experiment, learn from failures, and add complexity only when it is justified.</p>
+            </div>
+
+            <ol class="roadmap">
+              <li>
+                <span>01</span>
+                <div><strong>Classify tasks</strong><small>Separate local, object-centric and compositional transformations.</small></div>
+              </li>
+              <li>
+                <span>02</span>
+                <div><strong>Build a baseline</strong><small>Train a simple NCA on growth, filling and connection tasks.</small></div>
+              </li>
+              <li>
+                <span>03</span>
+                <div><strong>Stress-test dynamics</strong><small>Measure exactness, stability, rollout length and generalization.</small></div>
+              </li>
+              <li>
+                <span>04</span>
+                <div><strong>Add the hybrid layer</strong><small>Use object features and symbolic verification where local rules fail.</small></div>
+              </li>
+            </ol>
+
+            <div class="closing-thesis">
+              <span>Research question</span>
+              <blockquote>Can abstract reasoning emerge from learned local dynamics—and can verification make it exact?</blockquote>
+            </div>
+          </div>
+        </section>
+
+        <section class="slide" data-title="References" aria-hidden="true">
+          <div class="slide-content references-slide">
+            <div class="section-heading">
+              <div>
+                <p class="eyebrow">12 · REFERENCES</p>
+                <h2>Primary <span>sources</span></h2>
+              </div>
+              <p class="section-summary">Foundational work and the 2025 approaches that informed our preliminary strategy.</p>
+            </div>
+
+            <div class="references-grid">
+              <ol class="reference-list">
+                <li>
+                  <span>01</span>
+                  <p><strong>Chollet, F. (2019).</strong> “On the Measure of Intelligence.” <a href="https://arxiv.org/abs/1911.01547" target="_blank" rel="noreferrer">arXiv:1911.01547 ↗</a></p>
+                </li>
+                <li>
+                  <span>02</span>
+                  <p><strong>Xu, Y., Khalil, E. B., &amp; Sanner, S. (2023).</strong> “Graphs, Constraints, and Search for the Abstraction and Reasoning Corpus.” <a href="https://arxiv.org/abs/2210.09880" target="_blank" rel="noreferrer">ARGA ↗</a></p>
+                </li>
+                <li>
+                  <span>03</span>
+                  <p><strong>Jolicoeur-Martineau, A. (2025).</strong> “Less is More: Recursive Reasoning with Tiny Networks.” <a href="https://arxiv.org/abs/2510.04871" target="_blank" rel="noreferrer">TRM ↗</a></p>
+                </li>
+                <li>
+                  <span>04</span>
+                  <p><strong>Pourcel, J., Colas, C., &amp; Oudeyer, P.-Y. (2025).</strong> “Self-Improving Language Models for Evolutionary Program Synthesis.” <a href="https://arxiv.org/abs/2507.14172" target="_blank" rel="noreferrer">SOAR ↗</a></p>
+                </li>
+                <li>
+                  <span>05</span>
+                  <p><strong>Liao, I., &amp; Gu, A. (2025).</strong> “ARC-AGI Without Pretraining.” <a href="https://arxiv.org/abs/2512.06104" target="_blank" rel="noreferrer">CompressARC ↗</a></p>
+                </li>
+              </ol>
+
+              <ol class="reference-list" start="6">
+                <li>
+                  <span>06</span>
+                  <p><strong>Joffe, I., &amp; Eliasmith, C. (2025).</strong> “Vector Symbolic Algebras for the Abstraction and Reasoning Corpus.” <a href="https://github.com/ijoffe/ARC-VSA-2025" target="_blank" rel="noreferrer">Code ↗</a></p>
+                </li>
+                <li>
+                  <span>07</span>
+                  <p><strong>Berman, J. (2025).</strong> “From Parrots to Von Neumanns: How Evolutionary Test-Time Compute Achieved State-of-the-Art on ARC-AGI.” <a href="https://github.com/jerber/arc_agi" target="_blank" rel="noreferrer">ETTC ↗</a></p>
+                </li>
+                <li>
+                  <span>08</span>
+                  <p><strong>Guichard, E., Reimers, F., Kvalsund, M., Lepperød, M., &amp; Nichele, S. (2025).</strong> “ARC-NCA: Towards Developmental Solutions to the Abstraction and Reasoning Corpus.” <a href="https://doi.org/10.1162/ISAL.a.833" target="_blank" rel="noreferrer">Paper ↗</a></p>
+                </li>
+                <li>
+                  <span>09</span>
+                  <p><strong>ARC Prize Foundation (2025).</strong> “ARC Prize 2025 Results &amp; Analysis.” <a href="https://arcprize.org/blog/arc-prize-2025-results-analysis" target="_blank" rel="noreferrer">Results ↗</a></p>
+                </li>
+              </ol>
+            </div>
+
+            <p class="references-note">Local copies of the research papers were consulted when reconstructing the method diagrams. Flowcharts are our own visual summaries.</p>
+          </div>
+        </section>
+
       </div>
 
       <nav class="controls" aria-label="Navegación entre diapositivas">
@@ -506,6 +807,176 @@
       </div>
       <div id="overview-grid" class="overview-grid"></div>
     </div>
+
+    <div id="paper-modal" class="paper-modal" aria-hidden="true">
+      <div class="paper-dialog" role="dialog" aria-modal="true" aria-labelledby="paper-dialog-title">
+        <header class="paper-dialog-header">
+          <div>
+            <p id="paper-dialog-award" class="eyebrow">PAPER AWARD</p>
+            <h2 id="paper-dialog-title">Approach</h2>
+          </div>
+          <button id="close-paper-modal" class="close-button" type="button" aria-label="Close paper details">×</button>
+        </header>
+        <div id="paper-dialog-content" class="paper-dialog-content"></div>
+      </div>
+    </div>
+
+    <template id="paper-trm-template">
+      <section class="paper-detail">
+        <div class="paper-detail-overview">
+          <div>
+            <span class="detail-label">CORE IDEA</span>
+            <p>A single two-layer network is reused recursively. It improves an internal reasoning state <em>z</em>, then uses that state to revise its current answer <em>y</em>.</p>
+          </div>
+          <dl class="paper-facts">
+            <div><dt>Parameters</dt><dd>≈7M</dd></div>
+            <div><dt>ARC-AGI-2</dt><dd>≈8%</dd></div>
+            <div><dt>Key mechanism</dt><dd>Deep supervision</dd></div>
+          </dl>
+        </div>
+
+        <div class="algorithm-panel">
+          <div class="algorithm-heading"><span>Algorithm flow</span><strong>Repeated inference, shared weights</strong></div>
+          <div class="program-flow six-step-flow" aria-label="Tiny Recursion Model algorithm">
+            <div class="flow-node data-node"><small>INPUT</small><strong>Embed question x</strong><span>Initialize answer y and latent z</span></div>
+            <b class="flow-arrow">→</b>
+            <div class="flow-node process-node"><small>INNER LOOP · n TIMES</small><strong>z ← fθ(x, y, z)</strong><span>Refine the latent reasoning state</span></div>
+            <b class="flow-arrow">→</b>
+            <div class="flow-node process-node"><small>ANSWER UPDATE</small><strong>y ← fθ(y, z)</strong><span>Revise the current proposed solution</span></div>
+            <b class="flow-arrow">→</b>
+            <div class="flow-node loop-node"><small>DEEP RECURSION · T</small><strong>Repeat z → y</strong><span>Earlier passes need no gradient</span></div>
+            <b class="flow-arrow">→</b>
+            <div class="flow-node decision-node"><small>SUPERVISION</small><strong>Correct or halt?</strong><span>Output head + learned halting score</span></div>
+          </div>
+          <div class="flow-feedback"><span>Not finished</span><b>↺</b><strong>Carry y and z into the next supervision step</strong></div>
+        </div>
+
+        <div class="paper-detail-footer">
+          <p><strong>Why it matters:</strong> reasoning depth comes from repeatedly applying a tiny network—not from increasing model size.</p>
+          <a href="https://arxiv.org/abs/2510.04871" target="_blank" rel="noreferrer">Read TRM paper ↗</a>
+        </div>
+      </section>
+    </template>
+
+    <template id="paper-soar-template">
+      <section class="paper-detail">
+        <div class="paper-detail-overview">
+          <div>
+            <span class="detail-label">CORE IDEA</span>
+            <p>SOAR alternates between an evolutionary program-search phase and a learning phase. Better search traces train a better LLM; the improved LLM then performs better search.</p>
+          </div>
+          <dl class="paper-facts">
+            <div><dt>Programs</dt><dd>Python</dd></div>
+            <div><dt>ARC public test</dt><dd>52%</dd></div>
+            <div><dt>Key mechanism</dt><dd>Hindsight learning</dd></div>
+          </dl>
+        </div>
+
+        <div class="algorithm-panel two-phase-panel">
+          <div class="phase-label"><span>PHASE A</span><strong>Evolutionary search</strong></div>
+          <div class="program-flow five-step-flow" aria-label="SOAR evolutionary search phase">
+            <div class="flow-node data-node"><small>ARC TASK</small><strong>Demonstrations</strong><span>Input-output constraints</span></div>
+            <b class="flow-arrow">→</b>
+            <div class="flow-node process-node"><small>SAMPLE</small><strong>Generate programs</strong><span>LLM proposes diverse Python functions</span></div>
+            <b class="flow-arrow">→</b>
+            <div class="flow-node process-node"><small>EXECUTE</small><strong>Compute fitness</strong><span>Score against every demonstration</span></div>
+            <b class="flow-arrow">→</b>
+            <div class="flow-node decision-node"><small>SELECT</small><strong>Solved?</strong><span>Keep strong candidates; reject failures</span></div>
+            <b class="flow-arrow">→</b>
+            <div class="flow-node loop-node"><small>REFINE</small><strong>Use error feedback</strong><span>Mutate candidates and search again</span></div>
+          </div>
+          <div class="flow-feedback"><span>Evolution loop</span><b>↺</b><strong>Generate → execute → select → refine</strong></div>
+
+          <div class="phase-label learning-phase"><span>PHASE B</span><strong>Self-improvement between generations</strong></div>
+          <div class="learning-flow">
+            <span>Search traces</span><b>→</b><span>Valid sampling &amp; refinement pairs</span><b>→</b><span>Fine-tune LLM</span><b>→</b><span>Next search generation</span>
+          </div>
+        </div>
+
+        <div class="paper-detail-footer">
+          <p><strong>Why it matters:</strong> the search operator itself improves instead of remaining fixed while the compute budget grows.</p>
+          <a href="https://arxiv.org/abs/2507.14172" target="_blank" rel="noreferrer">Read SOAR paper ↗</a>
+        </div>
+      </section>
+    </template>
+
+    <template id="paper-compressarc-template">
+      <section class="paper-detail">
+        <div class="paper-detail-overview">
+          <div>
+            <span class="detail-label">CORE IDEA</span>
+            <p>CompressARC treats solving as neural code golf: the best explanation is the shortest program that reconstructs the observed puzzle and sensibly fills its missing solution.</p>
+          </div>
+          <dl class="paper-facts">
+            <div><dt>Parameters</dt><dd>76K</dd></div>
+            <div><dt>Pretraining</dt><dd>None</dd></div>
+            <div><dt>Principle</dt><dd>MDL</dd></div>
+          </dl>
+        </div>
+
+        <div class="algorithm-panel">
+          <div class="algorithm-heading"><span>Algorithm flow</span><strong>Optimize one puzzle at inference time</strong></div>
+          <div class="program-flow six-step-flow" aria-label="CompressARC inference-time algorithm">
+            <div class="flow-node data-node"><small>PUZZLE P</small><strong>Mask test outputs</strong><span>Keep demonstrations observable</span></div>
+            <b class="flow-arrow">→</b>
+            <div class="flow-node process-node"><small>INITIALIZE</small><strong>θ, μ, Σ</strong><span>Equivariant network + latent distribution</span></div>
+            <b class="flow-arrow">→</b>
+            <div class="flow-node process-node"><small>SAMPLE</small><strong>z ~ N(μ, Σ)</strong><span>Generate a puzzle-shaped latent code</span></div>
+            <b class="flow-arrow">→</b>
+            <div class="flow-node process-node"><small>DECODE</small><strong>NNθ(z) → grids</strong><span>Reconstruct observed and missing cells</span></div>
+            <b class="flow-arrow">→</b>
+            <div class="flow-node decision-node"><small>MINIMIZE DESCRIPTION</small><strong>KL + cross-entropy</strong><span>Adam updates θ, μ and Σ</span></div>
+          </div>
+          <div class="flow-feedback"><span>≈2000 steps</span><b>↺</b><strong>Sample → decode → measure → optimize</strong></div>
+        </div>
+
+        <div class="paper-detail-footer">
+          <p><strong>Why it matters:</strong> useful abstraction can emerge while deliberately overfitting a compact model to only the puzzle being solved.</p>
+          <a href="https://arxiv.org/abs/2512.06104" target="_blank" rel="noreferrer">Read CompressARC paper ↗</a>
+        </div>
+      </section>
+    </template>
+
+    <template id="paper-arcnca-template">
+      <section class="paper-detail">
+        <div class="paper-detail-overview">
+          <div>
+            <span class="detail-label">CORE IDEA · OUR FOCUS</span>
+            <p>ARC-NCA trains a custom dynamical “program” for each task. All cells share local neural update rules; repeated interactions develop the input into a candidate output.</p>
+          </div>
+          <dl class="paper-facts">
+            <div><dt>Training</dt><dd>Per task</dd></div>
+            <div><dt>Examples</dt><dd>2–3</dd></div>
+            <div><dt>Iterations</dt><dd>3000</dd></div>
+          </dl>
+        </div>
+
+        <div class="algorithm-panel nca-algorithm-panel">
+          <div class="algorithm-heading"><span>EngramNCA training flow</span><strong>Development + error correction</strong></div>
+          <div class="program-flow nca-program-flow" aria-label="ARC-NCA training algorithm">
+            <div class="flow-node data-node"><small>ENCODE</small><strong>ARC grid → H×W×C</strong><span>Visible colors + hidden channels</span></div>
+            <b class="flow-arrow">→</b>
+            <div class="flow-node nca-gene-node"><small>STAGE 1 · GeneCA</small><strong>Grow primitives</strong><span>Local CNN updates public cell states</span></div>
+            <b class="flow-arrow">→</b>
+            <div class="flow-node nca-prop-node"><small>STAGE 2 · GenePropCA</small><strong>Regulate memory</strong><span>Propagate and activate private states</span></div>
+            <b class="flow-arrow">→</b>
+            <div class="flow-node process-node"><small>REPEAT N STEPS</small><strong>Develop candidate</strong><span>The same rules act across space and time</span></div>
+            <b class="flow-arrow">→</b>
+            <div class="flow-node decision-node"><small>COMPARE</small><strong>Pixel-wise MSE</strong><span>Visible final state versus target grid</span></div>
+          </div>
+          <div class="flow-feedback nca-feedback"><span>Backpropagation through time</span><b>↺</b><strong>Update GeneCA + GenePropCA parameters; return state to pool</strong></div>
+
+          <div class="nca-test-flow">
+            <span>After training</span><strong>Test input</strong><b>→</b><strong>Learned local dynamics</strong><b>→</b><strong>Candidate output</strong><b>→</b><strong>Exact verification</strong>
+          </div>
+        </div>
+
+        <div class="paper-detail-footer">
+          <p><strong>Physical interpretation:</strong> a high-dimensional lattice evolves under a learned local law; computation is the trajectory, not one feed-forward pass.</p>
+          <a href="https://etimush.github.io/ARC_NCA/" target="_blank" rel="noreferrer">Open ARC-NCA project ↗</a>
+        </div>
+      </section>
+    </template>
 
     <script src="script.js"></script>
   </body>
