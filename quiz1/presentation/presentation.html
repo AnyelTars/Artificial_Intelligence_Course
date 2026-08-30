@@ -675,6 +675,1056 @@ h2 span {
   font-weight: 400;
 }
 
+/* Research slides -------------------------------------------------------- */
+
+.research-slide {
+  justify-content: center;
+}
+
+.section-heading {
+  display: flex;
+  margin-bottom: clamp(22px, 4vh, 42px);
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 42px;
+}
+
+.section-heading .eyebrow {
+  margin-bottom: 16px;
+}
+
+.section-heading h2 {
+  margin-bottom: 0;
+  font-size: clamp(42px, 5.5vw, 76px);
+}
+
+.section-summary {
+  max-width: 370px;
+  margin-bottom: 6px;
+  color: var(--muted);
+  font-size: clamp(14px, 1.25vw, 18px);
+  line-height: 1.55;
+}
+
+.approach-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+.approach-card {
+  min-height: 236px;
+  padding: 22px;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.025);
+}
+
+.featured-approach {
+  border-color: rgba(85, 215, 183, 0.5);
+  background: linear-gradient(145deg, rgba(85, 215, 183, 0.17), rgba(85, 215, 183, 0.035));
+}
+
+.paper-button {
+  position: relative;
+  padding-bottom: 42px;
+  color: var(--ink);
+  cursor: pointer;
+  font: inherit;
+  text-align: left;
+  transition: border-color 180ms ease, background 180ms ease, transform 180ms ease, box-shadow 180ms ease;
+}
+
+.paper-button:hover,
+.paper-button:focus-visible {
+  border-color: var(--accent);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.25);
+  transform: translateY(-5px);
+}
+
+.explore-label {
+  position: absolute;
+  right: 20px;
+  bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--accent);
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.explore-label b {
+  font-size: 12px;
+}
+
+.award-line {
+  display: flex;
+  margin-bottom: 25px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.award-line span {
+  color: var(--muted);
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.award-line strong {
+  color: var(--accent);
+  font-size: 12px;
+}
+
+.approach-card h3 {
+  margin-bottom: 16px;
+  font-family: var(--serif);
+  font-size: clamp(22px, 2vw, 30px);
+  font-weight: 400;
+  letter-spacing: -0.035em;
+}
+
+.approach-card p {
+  margin: 16px 0 0;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.mini-approach-flow {
+  display: flex;
+  min-height: 34px;
+  align-items: center;
+  gap: 6px;
+}
+
+.mini-approach-flow span {
+  padding: 7px 8px;
+  border-radius: 8px;
+  background: var(--surface-strong);
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.mini-approach-flow b {
+  color: var(--accent);
+  font-size: 13px;
+}
+
+.insight-strip {
+  display: grid;
+  margin-top: 14px;
+  padding: 15px 18px;
+  border: 1px solid rgba(85, 215, 183, 0.25);
+  border-radius: 14px;
+  align-items: center;
+  background: var(--accent-soft);
+  grid-template-columns: auto 1fr auto;
+  gap: 20px;
+}
+
+.insight-strip > span,
+.training-objective span,
+.hybrid-label,
+.closing-thesis > span {
+  color: var(--accent);
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.insight-strip strong {
+  font-size: 13px;
+}
+
+.source-link {
+  color: var(--accent);
+  font-size: 10px;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.source-link:hover {
+  text-decoration: underline;
+}
+
+.research-split {
+  display: grid;
+  align-items: center;
+  grid-template-columns: minmax(0, 0.9fr) minmax(450px, 1.1fr);
+  gap: clamp(50px, 8vw, 110px);
+}
+
+.hypothesis-copy h2 {
+  font-size: clamp(44px, 5.5vw, 76px);
+}
+
+.equation-block {
+  display: flex;
+  margin-top: 34px;
+  padding: 18px 20px;
+  border-left: 3px solid var(--accent);
+  align-items: center;
+  gap: 14px;
+  background: var(--surface);
+  font-family: var(--serif);
+  font-size: clamp(19px, 1.8vw, 27px);
+}
+
+.equation-block b {
+  color: var(--accent);
+}
+
+.equation-block sub,
+.training-objective sub,
+.training-objective sup {
+  font-size: 0.65em;
+}
+
+.equation-caption {
+  margin: 10px 0 0;
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.state-legend {
+  display: flex;
+  margin-top: 13px;
+  flex-wrap: wrap;
+  gap: 10px 18px;
+}
+
+.state-legend span {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: var(--muted);
+  font-size: 10px;
+}
+
+.state-legend strong {
+  color: var(--ink);
+  font-size: 10px;
+}
+
+.state-legend i {
+  width: 9px;
+  height: 9px;
+  border-radius: 3px;
+}
+
+.visible-state {
+  background: var(--accent);
+}
+
+.hidden-state {
+  border: 1px solid #f3bd4d;
+  background: rgba(243, 189, 77, 0.18);
+}
+
+.dynamics-panel {
+  padding: clamp(26px, 3vw, 40px);
+  border: 1px solid var(--line);
+  border-radius: 26px;
+  background: rgba(255, 255, 255, 0.025);
+}
+
+.dynamics-heading {
+  display: flex;
+  margin-bottom: 28px;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.dynamics-heading span {
+  color: var(--muted);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.dynamics-heading strong {
+  color: var(--accent);
+  font-family: var(--serif);
+  font-size: 22px;
+  font-style: italic;
+  font-weight: 400;
+}
+
+.nca-evolution {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.nca-frame small {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--muted);
+  font-size: 9px;
+  font-weight: 800;
+  text-align: center;
+}
+
+.cell-grid {
+  display: grid;
+  width: clamp(72px, 7vw, 102px);
+  aspect-ratio: 1;
+  padding: 5px;
+  border: 1px solid var(--line);
+  background: #080b0f;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3px;
+}
+
+.cell-grid i {
+  display: block;
+  background: #171f27;
+}
+
+.cell-grid .cell-a {
+  background: var(--accent);
+}
+
+.cell-grid .cell-b {
+  background: #f3bd4d;
+}
+
+.evolution-arrow {
+  color: var(--accent);
+  font-size: 22px;
+}
+
+.concept-chain {
+  display: flex;
+  margin: 28px 0 22px;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.concept-chain span {
+  color: var(--muted);
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.concept-chain b {
+  color: var(--accent);
+}
+
+.dynamics-panel > .source-link {
+  display: block;
+  text-align: right;
+}
+
+.solver-pipeline {
+  display: grid;
+  margin-top: clamp(10px, 3vh, 28px);
+  align-items: stretch;
+  grid-template-columns: 1fr auto 1fr auto 1fr auto 1fr auto 1fr;
+  gap: 10px;
+}
+
+.solver-pipeline > i {
+  display: grid;
+  color: var(--accent);
+  font-size: 18px;
+  font-style: normal;
+  place-items: center;
+}
+
+.pipeline-step {
+  min-height: 138px;
+  padding: 18px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.025);
+}
+
+.pipeline-step > span {
+  display: block;
+  margin-bottom: 28px;
+  color: var(--accent);
+  font-size: 10px;
+  font-weight: 800;
+}
+
+.pipeline-step strong,
+.pipeline-step small {
+  display: block;
+}
+
+.pipeline-step strong {
+  margin-bottom: 7px;
+  font-family: var(--serif);
+  font-size: clamp(17px, 1.5vw, 22px);
+  font-weight: 400;
+}
+
+.pipeline-step small {
+  color: var(--muted);
+  font-size: 10px;
+  line-height: 1.4;
+}
+
+.pipeline-step.active-step {
+  border-color: var(--accent-deep);
+  background: var(--accent-deep);
+}
+
+.active-step > span,
+.active-step small {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.training-objective {
+  display: grid;
+  margin-top: 16px;
+  padding: 18px 22px;
+  border-radius: 16px;
+  background: var(--surface);
+  grid-template-columns: 1.3fr 0.7fr;
+  gap: 30px;
+}
+
+.training-objective span,
+.training-objective strong {
+  display: block;
+}
+
+.training-objective strong {
+  margin-top: 8px;
+  font-family: var(--serif);
+  font-size: clamp(14px, 1.4vw, 20px);
+  font-weight: 400;
+}
+
+.test-transfer {
+  padding-left: 28px;
+  border-left: 1px solid var(--line);
+}
+
+.slide-note {
+  margin: 12px 0 0;
+  color: var(--muted);
+  font-size: 10px;
+  text-align: right;
+}
+
+.balance-grid {
+  display: grid;
+  margin-top: clamp(10px, 3vh, 30px);
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.balance-card {
+  padding: 24px 28px;
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.025);
+}
+
+.strength-card {
+  border-top: 3px solid var(--accent);
+}
+
+.limit-card {
+  border-top: 3px solid #f3bd4d;
+}
+
+.balance-label {
+  color: var(--accent);
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+}
+
+.limit-card .balance-label {
+  color: #f3bd4d;
+}
+
+.balance-card ul {
+  display: grid;
+  margin: 22px 0 0;
+  padding: 0;
+  list-style: none;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.balance-card li {
+  padding-left: 12px;
+  border-left: 1px solid var(--line);
+}
+
+.balance-card strong,
+.balance-card small {
+  display: block;
+}
+
+.balance-card strong {
+  margin-bottom: 8px;
+  font-family: var(--serif);
+  font-size: 19px;
+  font-weight: 400;
+}
+
+.balance-card small {
+  color: var(--muted);
+  font-size: 10px;
+  line-height: 1.4;
+}
+
+.hybrid-architecture {
+  margin-top: 16px;
+  padding: 17px 22px;
+  border-radius: 18px;
+  background: var(--surface);
+}
+
+.hybrid-flow {
+  display: flex;
+  margin-top: 12px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.hybrid-flow strong {
+  padding: 10px 14px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  font-size: 11px;
+}
+
+.hybrid-flow i,
+.hybrid-flow b {
+  color: var(--accent);
+  font-style: normal;
+}
+
+.hybrid-flow .hybrid-output {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+
+.roadmap {
+  display: grid;
+  margin: 4px 0 0;
+  padding: 0;
+  list-style: none;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+.roadmap li {
+  min-height: 160px;
+  padding: 22px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.025);
+}
+
+.roadmap li > span {
+  display: inline-block;
+  margin-bottom: 30px;
+  color: var(--accent);
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.roadmap strong,
+.roadmap small {
+  display: block;
+}
+
+.roadmap strong {
+  margin-bottom: 8px;
+  font-family: var(--serif);
+  font-size: 21px;
+  font-weight: 400;
+}
+
+.roadmap small {
+  color: var(--muted);
+  font-size: 10px;
+  line-height: 1.45;
+}
+
+.closing-thesis {
+  display: grid;
+  margin-top: 16px;
+  padding: 18px 22px;
+  border-left: 3px solid var(--accent);
+  align-items: center;
+  background: var(--surface);
+  grid-template-columns: 150px 1fr;
+}
+
+.closing-thesis blockquote {
+  margin: 0;
+  font-family: var(--serif);
+  font-size: clamp(18px, 1.8vw, 26px);
+  letter-spacing: -0.02em;
+}
+
+.paper-figure {
+  display: block;
+  width: 100%;
+  max-height: 360px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  object-fit: contain;
+  background: #fff;
+}
+
+.paper-video {
+  display: block;
+  width: 100%;
+  max-height: 360px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: #080b0f;
+  object-fit: contain;
+}
+
+.visual-placeholder {
+  display: grid;
+  min-height: 180px;
+  border: 1px dashed rgba(85, 215, 183, 0.45);
+  border-radius: 16px;
+  color: var(--muted);
+  font-size: 11px;
+  place-items: center;
+}
+
+.references-slide {
+  justify-content: center;
+}
+
+.references-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: clamp(28px, 5vw, 70px);
+}
+
+.reference-list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  flex-direction: column;
+  list-style: none;
+}
+
+.reference-list li {
+  display: grid;
+  padding: 13px 0;
+  border-top: 1px solid var(--line);
+  grid-template-columns: 34px 1fr;
+  gap: 10px;
+}
+
+.reference-list li:last-child {
+  border-bottom: 1px solid var(--line);
+}
+
+.reference-list li > span {
+  padding-top: 2px;
+  color: var(--accent);
+  font-size: 9px;
+  font-weight: 800;
+}
+
+.reference-list p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 10px;
+  line-height: 1.45;
+}
+
+.reference-list strong {
+  color: var(--ink);
+  font-weight: 700;
+}
+
+.reference-list a {
+  color: var(--accent);
+  font-weight: 700;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.reference-list a:hover {
+  text-decoration: underline;
+}
+
+.references-note {
+  margin: 16px 0 0;
+  color: var(--muted);
+  font-size: 9px;
+  text-align: right;
+}
+
+/* Interactive paper details --------------------------------------------- */
+
+.paper-modal {
+  position: fixed;
+  z-index: 140;
+  inset: 0;
+  display: grid;
+  visibility: hidden;
+  padding: clamp(18px, 3vw, 46px);
+  background: rgba(4, 7, 10, 0.9);
+  opacity: 0;
+  backdrop-filter: blur(18px);
+  place-items: center;
+  transition: opacity 220ms ease, visibility 220ms;
+}
+
+.paper-modal.is-open {
+  visibility: visible;
+  opacity: 1;
+}
+
+.paper-dialog {
+  display: flex;
+  width: min(1320px, 100%);
+  max-height: 100%;
+  border: 1px solid var(--line);
+  border-radius: 28px;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 95% 0%, rgba(85, 215, 183, 0.11), transparent 24rem),
+    var(--background);
+  box-shadow: 0 35px 100px rgba(0, 0, 0, 0.58);
+  flex-direction: column;
+}
+
+.paper-dialog-header {
+  display: flex;
+  padding: 26px clamp(26px, 4vw, 52px) 20px;
+  border-bottom: 1px solid var(--line);
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.paper-dialog-header .eyebrow {
+  margin-bottom: 9px;
+}
+
+.paper-dialog-header h2 {
+  margin: 0;
+  font-size: clamp(34px, 4vw, 58px);
+}
+
+.paper-dialog-content {
+  overflow-y: auto;
+  padding: clamp(24px, 3vw, 42px) clamp(26px, 4vw, 52px) clamp(28px, 4vw, 50px);
+}
+
+.paper-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.paper-detail-overview {
+  display: grid;
+  align-items: stretch;
+  grid-template-columns: 1.25fr 0.75fr;
+  gap: 24px;
+}
+
+.paper-detail-overview > div:first-child {
+  padding: 20px 24px;
+  border-left: 3px solid var(--accent);
+  background: var(--surface);
+}
+
+.detail-label {
+  color: var(--accent);
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.13em;
+}
+
+.paper-detail-overview p {
+  max-width: 760px;
+  margin: 10px 0 0;
+  color: var(--muted);
+  font-size: clamp(13px, 1.15vw, 17px);
+  line-height: 1.5;
+}
+
+.paper-facts {
+  display: grid;
+  margin: 0;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+
+.paper-facts div {
+  display: flex;
+  padding: 14px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  justify-content: center;
+  flex-direction: column;
+  background: rgba(255, 255, 255, 0.025);
+}
+
+.paper-facts dt {
+  margin-bottom: 8px;
+  color: var(--muted);
+  font-size: 8px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.paper-facts dd {
+  margin: 0;
+  color: var(--accent);
+  font-family: var(--serif);
+  font-size: clamp(15px, 1.35vw, 20px);
+}
+
+.algorithm-panel {
+  padding: 20px;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.algorithm-heading,
+.phase-label {
+  display: flex;
+  margin-bottom: 16px;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.algorithm-heading span,
+.phase-label span {
+  color: var(--accent);
+  font-size: 8px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+}
+
+.algorithm-heading strong,
+.phase-label strong {
+  font-family: var(--serif);
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.program-flow {
+  display: grid;
+  align-items: stretch;
+  gap: 8px;
+}
+
+.six-step-flow,
+.five-step-flow,
+.nca-program-flow {
+  grid-template-columns: 1fr auto 1fr auto 1fr auto 1fr auto 1fr;
+}
+
+.flow-arrow {
+  display: grid;
+  color: var(--accent);
+  font-size: 17px;
+  place-items: center;
+}
+
+.flow-node {
+  min-height: 118px;
+  padding: 14px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--surface);
+}
+
+.flow-node small,
+.flow-node strong,
+.flow-node span {
+  display: block;
+}
+
+.flow-node small {
+  min-height: 22px;
+  margin-bottom: 13px;
+  color: var(--accent);
+  font-size: 7px;
+  font-weight: 800;
+  letter-spacing: 0.09em;
+}
+
+.flow-node strong {
+  margin-bottom: 6px;
+  font-family: var(--serif);
+  font-size: clamp(14px, 1.25vw, 18px);
+  font-weight: 400;
+}
+
+.flow-node > span {
+  color: var(--muted);
+  font-size: 9px;
+  line-height: 1.35;
+}
+
+.data-node {
+  border-style: dashed;
+}
+
+.process-node {
+  border-top: 2px solid var(--accent-deep);
+}
+
+.loop-node {
+  background: rgba(85, 215, 183, 0.08);
+}
+
+.decision-node {
+  border-color: rgba(243, 189, 77, 0.6);
+  background: rgba(243, 189, 77, 0.07);
+}
+
+.decision-node small {
+  color: #f3bd4d;
+}
+
+.nca-gene-node {
+  border-color: rgba(85, 215, 183, 0.6);
+  background: rgba(85, 215, 183, 0.08);
+}
+
+.nca-prop-node {
+  border-color: rgba(123, 145, 255, 0.6);
+  background: rgba(123, 145, 255, 0.08);
+}
+
+.nca-prop-node small {
+  color: #aab8ff;
+}
+
+.flow-feedback {
+  display: flex;
+  margin: 12px auto 0;
+  padding: 8px 14px;
+  border: 1px solid rgba(85, 215, 183, 0.25);
+  border-radius: 999px;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: var(--accent-soft);
+  font-size: 9px;
+}
+
+.flow-feedback span {
+  color: var(--accent);
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.flow-feedback b {
+  color: var(--accent);
+  font-size: 16px;
+}
+
+.flow-feedback strong {
+  font-weight: 700;
+}
+
+.learning-phase {
+  margin-top: 17px;
+  padding-top: 15px;
+  border-top: 1px solid var(--line);
+}
+
+.learning-flow,
+.nca-test-flow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.learning-flow span,
+.nca-test-flow strong {
+  padding: 9px 12px;
+  border: 1px solid var(--line);
+  border-radius: 9px;
+  background: var(--surface);
+  font-size: 9px;
+}
+
+.learning-flow b,
+.nca-test-flow b {
+  color: var(--accent);
+}
+
+.nca-test-flow {
+  margin-top: 16px;
+  padding-top: 15px;
+  border-top: 1px solid var(--line);
+}
+
+.nca-test-flow > span {
+  margin-right: 8px;
+  color: var(--accent);
+  font-size: 8px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.paper-detail-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.paper-detail-footer p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.45;
+}
+
+.paper-detail-footer strong {
+  color: var(--ink);
+}
+
+.paper-detail-footer a {
+  flex: 0 0 auto;
+  color: var(--accent);
+  font-size: 10px;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.paper-detail-footer a:hover {
+  text-decoration: underline;
+}
+
 @media (max-width: 820px) {
   .brand-name,
   .slide-counter,
@@ -748,6 +1798,106 @@ h2 span {
   .overview-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .section-heading {
+    display: block;
+  }
+
+  .section-summary {
+    display: none;
+  }
+
+  .approach-grid,
+  .roadmap {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .approach-card,
+  .roadmap li {
+    min-height: 0;
+    padding: 14px;
+  }
+
+  .approach-card p,
+  .roadmap small,
+  .insight-strip > span,
+  .insight-strip .source-link {
+    display: none;
+  }
+
+  .research-split {
+    display: flex;
+    align-items: stretch;
+    gap: 24px;
+  }
+
+  .solver-pipeline {
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  .solver-pipeline > i {
+    display: none;
+  }
+
+  .pipeline-step {
+    min-height: 0;
+    padding: 12px;
+  }
+
+  .pipeline-step > span {
+    margin-bottom: 12px;
+  }
+
+  .pipeline-step small,
+  .slide-note {
+    display: none;
+  }
+
+  .balance-card ul {
+    grid-template-columns: 1fr;
+    gap: 9px;
+  }
+
+  .balance-card small {
+    display: none;
+  }
+
+  .references-grid {
+    gap: 20px;
+  }
+
+  .reference-list li {
+    padding: 8px 0;
+  }
+
+  .paper-modal {
+    padding: 12px;
+  }
+
+  .paper-dialog {
+    border-radius: 20px;
+  }
+
+  .paper-dialog-header {
+    padding: 18px 20px 14px;
+  }
+
+  .paper-dialog-content {
+    padding: 18px 20px 24px;
+  }
+
+  .paper-detail-overview {
+    grid-template-columns: 1fr;
+  }
+
+  .flow-node {
+    min-height: 105px;
+    padding: 10px;
+  }
+
+  .flow-feedback strong {
+    font-size: 8px;
+  }
 }
 
 @media (max-width: 540px) {
@@ -766,6 +1916,109 @@ h2 span {
 
   .overview-grid {
     grid-template-columns: 1fr;
+  }
+
+  .approach-grid,
+  .balance-grid,
+  .roadmap {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .award-line {
+    margin-bottom: 10px;
+  }
+
+  .mini-approach-flow,
+  .training-objective,
+  .hybrid-label {
+    display: none;
+  }
+
+  .insight-strip {
+    grid-template-columns: 1fr;
+  }
+
+  .nca-evolution {
+    justify-content: center;
+  }
+
+  .evolution-arrow {
+    display: none;
+  }
+
+  .solver-pipeline {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hybrid-flow {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .hybrid-flow i,
+  .hybrid-flow b {
+    display: none;
+  }
+
+  .closing-thesis {
+    display: block;
+  }
+
+  .closing-thesis > span {
+    display: block;
+    margin-bottom: 8px;
+  }
+
+  .references-grid {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .reference-list li {
+    padding: 5px 0;
+  }
+
+  .reference-list p {
+    font-size: 8px;
+  }
+
+  .references-note {
+    display: none;
+  }
+
+  .explore-label {
+    display: none;
+  }
+
+  .paper-facts {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .six-step-flow,
+  .five-step-flow,
+  .nca-program-flow {
+    grid-template-columns: 1fr;
+  }
+
+  .flow-arrow {
+    min-height: 14px;
+    transform: rotate(90deg);
+  }
+
+  .learning-flow,
+  .nca-test-flow,
+  .paper-detail-footer {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .learning-flow b,
+  .nca-test-flow b {
+    display: none;
+  }
+
+  .paper-detail-footer a {
+    align-self: flex-end;
   }
 
   .next-button {
@@ -827,7 +2080,7 @@ h2 span {
         </a>
 
         <div class="topbar-actions">
-          <span id="slide-counter" class="slide-counter" aria-live="polite">01 / 06</span>
+          <span id="slide-counter" class="slide-counter" aria-live="polite">01 / 27</span>
           <button id="overview-button" class="icon-button" type="button" aria-label="Ver todas las diapositivas" title="Vista general (O)">
             <svg viewBox="0 0 24 24" aria-hidden="true">
               <rect x="4" y="4" width="6" height="6" rx="1"></rect>
@@ -1289,6 +2542,307 @@ h2 span {
           </div>
         </section>
 
+        <section class="slide" data-title="Lessons from 2025" aria-hidden="true">
+          <div class="slide-content research-slide">
+            <div class="section-heading">
+              <div>
+                <p class="eyebrow">07 · BRAINSTORMING</p>
+                <h2>What did <span>2025</span> teach us?</h2>
+              </div>
+              <p class="section-summary">Different representations, one recurring strategy: do not accept the first answer—refine it.</p>
+            </div>
+
+            <div class="approach-grid">
+              <button class="approach-card paper-button" type="button" data-paper-modal="trm" data-paper-title="Tiny Recursion Model" data-paper-award="1st Paper Award" aria-haspopup="dialog">
+                <div class="award-line"><span>1st Paper Award</span><strong>TRM</strong></div>
+                <h3>Recursive reasoning</h3>
+                <div class="mini-approach-flow" aria-label="TRM recursive refinement">
+                  <span>state</span><b>→</b><span>refine</span><b>↻</b><span>answer</span>
+                </div>
+                <p>A tiny network repeatedly improves a latent state and its current answer.</p>
+                <span class="explore-label">Explore algorithm <b>↗</b></span>
+              </button>
+
+              <button class="approach-card paper-button" type="button" data-paper-modal="soar" data-paper-title="SOAR" data-paper-award="2nd Paper Award" aria-haspopup="dialog">
+                <div class="award-line"><span>2nd Paper Award</span><strong>SOAR</strong></div>
+                <h3>Evolutionary search</h3>
+                <div class="mini-approach-flow" aria-label="SOAR evolutionary search">
+                  <span>generate</span><b>→</b><span>score</span><b>↻</b><span>learn</span>
+                </div>
+                <p>An LLM generates and refines programs, then learns from its own search traces.</p>
+                <span class="explore-label">Explore algorithm <b>↗</b></span>
+              </button>
+
+              <button class="approach-card paper-button" type="button" data-paper-modal="compressarc" data-paper-title="CompressARC" data-paper-award="3rd Paper Award" aria-haspopup="dialog">
+                <div class="award-line"><span>3rd Paper Award</span><strong>CompressARC</strong></div>
+                <h3>Compression as reasoning</h3>
+                <div class="mini-approach-flow" aria-label="CompressARC minimum description length">
+                  <span>puzzle</span><b>→</b><span>short code</span><b>→</b><span>output</span>
+                </div>
+                <p>Minimum Description Length favors compact explanations trained on one puzzle.</p>
+                <span class="explore-label">Explore algorithm <b>↗</b></span>
+              </button>
+
+              <button class="approach-card paper-button featured-approach" type="button" data-paper-modal="arcnca" data-paper-title="ARC-NCA" data-paper-award="Paper Award Runner-Up · Our focus" aria-haspopup="dialog">
+                <div class="award-line"><span>Paper Award Runner-Up</span><strong>ARC-NCA</strong></div>
+                <h3>Developmental dynamics</h3>
+                <div class="mini-approach-flow" aria-label="ARC-NCA local-to-global dynamics">
+                  <span>local rule</span><b>→</b><span>iterate</span><b>→</b><span>pattern</span>
+                </div>
+                <p>Learned local interactions produce an emergent global grid transformation.</p>
+                <span class="explore-label">Explore algorithm <b>↗</b></span>
+              </button>
+            </div>
+
+            <div class="insight-strip">
+              <span>Shared principle</span>
+              <strong>Generate a hypothesis → test it → use the error → refine</strong>
+              <a class="source-link" href="https://arcprize.org/blog/arc-prize-2025-results-analysis" target="_blank" rel="noreferrer">ARC Prize 2025 ↗</a>
+            </div>
+          </div>
+        </section>
+
+        <section class="slide" data-title="How ARC-NCA works" aria-hidden="true">
+          <div class="slide-content research-split">
+            <div class="hypothesis-copy">
+              <p class="eyebrow">08 · OUR FOCUS</p>
+              <h2>How does<br /><span>ARC-NCA work?</span></h2>
+              <p class="body-copy">For every ARC problem, the system trains a new cellular automaton from its 2–3 demonstrations. A shared neural rule updates every cell using local information.</p>
+
+              <div class="equation-block" aria-label="Cell update equation">
+                <span>s<sub>i</sub>(t + 1)</span>
+                <b>=</b>
+                <span>F<sub>θ</sub>(s<sub>i</sub>(t), neighbors)</span>
+              </div>
+              <div class="state-legend">
+                <span><i class="visible-state"></i><strong>Visible state</strong> predicted color</span>
+                <span><i class="hidden-state"></i><strong>Hidden state</strong> local memory</span>
+              </div>
+            </div>
+
+            <div class="dynamics-panel">
+              <div class="dynamics-heading">
+                <span>Developmental computation</span>
+                <strong>One rule, many cells</strong>
+              </div>
+
+              <!-- Optional asset slot: replace this diagram with an inline GIF by following the README instructions. -->
+              <div class="nca-evolution" aria-label="Conceptual cellular automata evolution">
+                <div class="nca-frame">
+                  <small>t = 0</small>
+                  <div class="cell-grid">
+                    <i></i><i></i><i></i><i></i><i class="cell-a"></i><i></i><i></i><i></i><i></i>
+                  </div>
+                </div>
+                <span class="evolution-arrow">→</span>
+                <div class="nca-frame">
+                  <small>t = 2</small>
+                  <div class="cell-grid">
+                    <i></i><i class="cell-a"></i><i></i><i class="cell-a"></i><i class="cell-b"></i><i class="cell-a"></i><i></i><i class="cell-a"></i><i></i>
+                  </div>
+                </div>
+                <span class="evolution-arrow">→</span>
+                <div class="nca-frame">
+                  <small>t = T</small>
+                  <div class="cell-grid">
+                    <i class="cell-a"></i><i class="cell-a"></i><i class="cell-a"></i><i class="cell-a"></i><i class="cell-b"></i><i class="cell-a"></i><i class="cell-a"></i><i class="cell-a"></i><i class="cell-a"></i>
+                  </div>
+                </div>
+              </div>
+
+              <div class="concept-chain">
+                <span>Encode grid</span><b>↓</b><span>Repeat local updates</span><b>↓</b><span>Decode colors</span>
+              </div>
+              <a class="source-link" href="https://etimush.github.io/ARC_NCA/" target="_blank" rel="noreferrer">ARC-NCA project ↗</a>
+            </div>
+          </div>
+        </section>
+
+        <section class="slide" data-title="Proposed NCA solver" aria-hidden="true">
+          <div class="slide-content research-slide">
+            <div class="section-heading">
+              <div>
+                <p class="eyebrow">09 · PRELIMINARY STRATEGY</p>
+                <h2>The <span>NCA solver</span></h2>
+              </div>
+              <p class="section-summary">Train a small, task-specific dynamical rule from the demonstrations, then verify its behavior exactly.</p>
+            </div>
+
+            <div class="solver-pipeline" aria-label="Proposed ARC-NCA solver flowchart">
+              <article class="pipeline-step">
+                <span>01</span>
+                <strong>Demonstrations</strong>
+                <small>Input-output pairs</small>
+              </article>
+              <i aria-hidden="true">→</i>
+              <article class="pipeline-step">
+                <span>02</span>
+                <strong>Cell state</strong>
+                <small>Color + hidden memory</small>
+              </article>
+              <i aria-hidden="true">→</i>
+              <article class="pipeline-step active-step">
+                <span>03</span>
+                <strong>Learn F<sub>θ</sub></strong>
+                <small>New NCA per task</small>
+              </article>
+              <i aria-hidden="true">→</i>
+              <article class="pipeline-step">
+                <span>04</span>
+                <strong>Roll out</strong>
+                <small>Multiple T and seeds</small>
+              </article>
+              <i aria-hidden="true">→</i>
+              <article class="pipeline-step">
+                <span>05</span>
+                <strong>Verify</strong>
+                <small>Exact match on all examples</small>
+              </article>
+            </div>
+
+            <div class="training-objective">
+              <div>
+                <span>Task-time objective</span>
+                <strong>θ* = arg min<sub>θ</sub> Σ<sub>k</sub> L(Decode(S<sub>θ</sub><sup>T</sup>(X<sub>k</sub>)), Y<sub>k</sub>)</strong>
+              </div>
+              <div class="test-transfer">
+                <span>Then transfer the learned rule</span>
+                <strong>S<sub>θ*</sub><sup>T</sup>(X<sub>test</sub>) → Ŷ<sub>test</sub></strong>
+              </div>
+            </div>
+
+            <p class="slide-note">Key safeguard: keep intermediate states as candidates—the final stable state is not always the exact answer.</p>
+          </div>
+        </section>
+
+        <section class="slide" data-title="Hybrid strategy" aria-hidden="true">
+          <div class="slide-content research-slide">
+            <p class="eyebrow">10 · SCIENTIFIC CAUTION</p>
+            <h2>Where can NCA <span>help—or fail?</span></h2>
+
+            <div class="balance-grid">
+              <article class="balance-card strength-card">
+                <span class="balance-label">PROMISING FOR</span>
+                <ul>
+                  <li><strong>Growth</strong><small>Extend shapes and patterns step by step.</small></li>
+                  <li><strong>Propagation</strong><small>Connect points and transmit spatial information.</small></li>
+                  <li><strong>Filling</strong><small>Respect boundaries through local interactions.</small></li>
+                </ul>
+              </article>
+
+              <article class="balance-card limit-card">
+                <span class="balance-label">OPEN CHALLENGES</span>
+                <ul>
+                  <li><strong>Global relations</strong><small>Counting and object-level composition.</small></li>
+                  <li><strong>Changing size</strong><small>The lattice cannot naturally resize itself.</small></li>
+                  <li><strong>Exactness</strong><small>One unstable or incorrect pixel means failure.</small></li>
+                </ul>
+              </article>
+            </div>
+
+            <div class="hybrid-architecture" aria-label="Proposed hybrid system">
+              <span class="hybrid-label">Our hybrid direction</span>
+              <div class="hybrid-flow">
+                <strong>Object analysis</strong><i>+</i><strong>NCA candidate generation</strong><i>+</i><strong>Exact symbolic verifier</strong><b>→</b><strong class="hybrid-output">Final output</strong>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="slide" data-title="Research roadmap" aria-hidden="true">
+          <div class="slide-content research-slide">
+            <div class="section-heading">
+              <div>
+                <p class="eyebrow">11 · RESEARCH ROADMAP</p>
+                <h2>How will we <span>test the idea?</span></h2>
+              </div>
+              <p class="section-summary">Start with a falsifiable experiment, learn from failures, and add complexity only when it is justified.</p>
+            </div>
+
+            <ol class="roadmap">
+              <li>
+                <span>01</span>
+                <div><strong>Classify tasks</strong><small>Separate local, object-centric and compositional transformations.</small></div>
+              </li>
+              <li>
+                <span>02</span>
+                <div><strong>Build a baseline</strong><small>Train a simple NCA on growth, filling and connection tasks.</small></div>
+              </li>
+              <li>
+                <span>03</span>
+                <div><strong>Stress-test dynamics</strong><small>Measure exactness, stability, rollout length and generalization.</small></div>
+              </li>
+              <li>
+                <span>04</span>
+                <div><strong>Add the hybrid layer</strong><small>Use object features and symbolic verification where local rules fail.</small></div>
+              </li>
+            </ol>
+
+            <div class="closing-thesis">
+              <span>Research question</span>
+              <blockquote>Can abstract reasoning emerge from learned local dynamics—and can verification make it exact?</blockquote>
+            </div>
+          </div>
+        </section>
+
+        <section class="slide" data-title="References" aria-hidden="true">
+          <div class="slide-content references-slide">
+            <div class="section-heading">
+              <div>
+                <p class="eyebrow">12 · REFERENCES</p>
+                <h2>Primary <span>sources</span></h2>
+              </div>
+              <p class="section-summary">Foundational work and the 2025 approaches that informed our preliminary strategy.</p>
+            </div>
+
+            <div class="references-grid">
+              <ol class="reference-list">
+                <li>
+                  <span>01</span>
+                  <p><strong>Chollet, F. (2019).</strong> “On the Measure of Intelligence.” <a href="https://arxiv.org/abs/1911.01547" target="_blank" rel="noreferrer">arXiv:1911.01547 ↗</a></p>
+                </li>
+                <li>
+                  <span>02</span>
+                  <p><strong>Xu, Y., Khalil, E. B., &amp; Sanner, S. (2023).</strong> “Graphs, Constraints, and Search for the Abstraction and Reasoning Corpus.” <a href="https://arxiv.org/abs/2210.09880" target="_blank" rel="noreferrer">ARGA ↗</a></p>
+                </li>
+                <li>
+                  <span>03</span>
+                  <p><strong>Jolicoeur-Martineau, A. (2025).</strong> “Less is More: Recursive Reasoning with Tiny Networks.” <a href="https://arxiv.org/abs/2510.04871" target="_blank" rel="noreferrer">TRM ↗</a></p>
+                </li>
+                <li>
+                  <span>04</span>
+                  <p><strong>Pourcel, J., Colas, C., &amp; Oudeyer, P.-Y. (2025).</strong> “Self-Improving Language Models for Evolutionary Program Synthesis.” <a href="https://arxiv.org/abs/2507.14172" target="_blank" rel="noreferrer">SOAR ↗</a></p>
+                </li>
+                <li>
+                  <span>05</span>
+                  <p><strong>Liao, I., &amp; Gu, A. (2025).</strong> “ARC-AGI Without Pretraining.” <a href="https://arxiv.org/abs/2512.06104" target="_blank" rel="noreferrer">CompressARC ↗</a></p>
+                </li>
+              </ol>
+
+              <ol class="reference-list" start="6">
+                <li>
+                  <span>06</span>
+                  <p><strong>Joffe, I., &amp; Eliasmith, C. (2025).</strong> “Vector Symbolic Algebras for the Abstraction and Reasoning Corpus.” <a href="https://github.com/ijoffe/ARC-VSA-2025" target="_blank" rel="noreferrer">Code ↗</a></p>
+                </li>
+                <li>
+                  <span>07</span>
+                  <p><strong>Berman, J. (2025).</strong> “From Parrots to Von Neumanns: How Evolutionary Test-Time Compute Achieved State-of-the-Art on ARC-AGI.” <a href="https://github.com/jerber/arc_agi" target="_blank" rel="noreferrer">ETTC ↗</a></p>
+                </li>
+                <li>
+                  <span>08</span>
+                  <p><strong>Guichard, E., Reimers, F., Kvalsund, M., Lepperød, M., &amp; Nichele, S. (2025).</strong> “ARC-NCA: Towards Developmental Solutions to the Abstraction and Reasoning Corpus.” <a href="https://doi.org/10.1162/ISAL.a.833" target="_blank" rel="noreferrer">Paper ↗</a></p>
+                </li>
+                <li>
+                  <span>09</span>
+                  <p><strong>ARC Prize Foundation (2025).</strong> “ARC Prize 2025 Results &amp; Analysis.” <a href="https://arcprize.org/blog/arc-prize-2025-results-analysis" target="_blank" rel="noreferrer">Results ↗</a></p>
+                </li>
+              </ol>
+            </div>
+
+            <p class="references-note">Local copies of the research papers were consulted when reconstructing the method diagrams. Flowcharts are our own visual summaries.</p>
+          </div>
+        </section>
+
       </div>
 
       <nav class="controls" aria-label="Navegación entre diapositivas">
@@ -1314,6 +2868,176 @@ h2 span {
       <div id="overview-grid" class="overview-grid"></div>
     </div>
 
+    <div id="paper-modal" class="paper-modal" aria-hidden="true">
+      <div class="paper-dialog" role="dialog" aria-modal="true" aria-labelledby="paper-dialog-title">
+        <header class="paper-dialog-header">
+          <div>
+            <p id="paper-dialog-award" class="eyebrow">PAPER AWARD</p>
+            <h2 id="paper-dialog-title">Approach</h2>
+          </div>
+          <button id="close-paper-modal" class="close-button" type="button" aria-label="Close paper details">×</button>
+        </header>
+        <div id="paper-dialog-content" class="paper-dialog-content"></div>
+      </div>
+    </div>
+
+    <template id="paper-trm-template">
+      <section class="paper-detail">
+        <div class="paper-detail-overview">
+          <div>
+            <span class="detail-label">CORE IDEA</span>
+            <p>A single two-layer network is reused recursively. It improves an internal reasoning state <em>z</em>, then uses that state to revise its current answer <em>y</em>.</p>
+          </div>
+          <dl class="paper-facts">
+            <div><dt>Parameters</dt><dd>≈7M</dd></div>
+            <div><dt>ARC-AGI-2</dt><dd>≈8%</dd></div>
+            <div><dt>Key mechanism</dt><dd>Deep supervision</dd></div>
+          </dl>
+        </div>
+
+        <div class="algorithm-panel">
+          <div class="algorithm-heading"><span>Algorithm flow</span><strong>Repeated inference, shared weights</strong></div>
+          <div class="program-flow six-step-flow" aria-label="Tiny Recursion Model algorithm">
+            <div class="flow-node data-node"><small>INPUT</small><strong>Embed question x</strong><span>Initialize answer y and latent z</span></div>
+            <b class="flow-arrow">→</b>
+            <div class="flow-node process-node"><small>INNER LOOP · n TIMES</small><strong>z ← fθ(x, y, z)</strong><span>Refine the latent reasoning state</span></div>
+            <b class="flow-arrow">→</b>
+            <div class="flow-node process-node"><small>ANSWER UPDATE</small><strong>y ← fθ(y, z)</strong><span>Revise the current proposed solution</span></div>
+            <b class="flow-arrow">→</b>
+            <div class="flow-node loop-node"><small>DEEP RECURSION · T</small><strong>Repeat z → y</strong><span>Earlier passes need no gradient</span></div>
+            <b class="flow-arrow">→</b>
+            <div class="flow-node decision-node"><small>SUPERVISION</small><strong>Correct or halt?</strong><span>Output head + learned halting score</span></div>
+          </div>
+          <div class="flow-feedback"><span>Not finished</span><b>↺</b><strong>Carry y and z into the next supervision step</strong></div>
+        </div>
+
+        <div class="paper-detail-footer">
+          <p><strong>Why it matters:</strong> reasoning depth comes from repeatedly applying a tiny network—not from increasing model size.</p>
+          <a href="https://arxiv.org/abs/2510.04871" target="_blank" rel="noreferrer">Read TRM paper ↗</a>
+        </div>
+      </section>
+    </template>
+
+    <template id="paper-soar-template">
+      <section class="paper-detail">
+        <div class="paper-detail-overview">
+          <div>
+            <span class="detail-label">CORE IDEA</span>
+            <p>SOAR alternates between an evolutionary program-search phase and a learning phase. Better search traces train a better LLM; the improved LLM then performs better search.</p>
+          </div>
+          <dl class="paper-facts">
+            <div><dt>Programs</dt><dd>Python</dd></div>
+            <div><dt>ARC public test</dt><dd>52%</dd></div>
+            <div><dt>Key mechanism</dt><dd>Hindsight learning</dd></div>
+          </dl>
+        </div>
+
+        <div class="algorithm-panel two-phase-panel">
+          <div class="phase-label"><span>PHASE A</span><strong>Evolutionary search</strong></div>
+          <div class="program-flow five-step-flow" aria-label="SOAR evolutionary search phase">
+            <div class="flow-node data-node"><small>ARC TASK</small><strong>Demonstrations</strong><span>Input-output constraints</span></div>
+            <b class="flow-arrow">→</b>
+            <div class="flow-node process-node"><small>SAMPLE</small><strong>Generate programs</strong><span>LLM proposes diverse Python functions</span></div>
+            <b class="flow-arrow">→</b>
+            <div class="flow-node process-node"><small>EXECUTE</small><strong>Compute fitness</strong><span>Score against every demonstration</span></div>
+            <b class="flow-arrow">→</b>
+            <div class="flow-node decision-node"><small>SELECT</small><strong>Solved?</strong><span>Keep strong candidates; reject failures</span></div>
+            <b class="flow-arrow">→</b>
+            <div class="flow-node loop-node"><small>REFINE</small><strong>Use error feedback</strong><span>Mutate candidates and search again</span></div>
+          </div>
+          <div class="flow-feedback"><span>Evolution loop</span><b>↺</b><strong>Generate → execute → select → refine</strong></div>
+
+          <div class="phase-label learning-phase"><span>PHASE B</span><strong>Self-improvement between generations</strong></div>
+          <div class="learning-flow">
+            <span>Search traces</span><b>→</b><span>Valid sampling &amp; refinement pairs</span><b>→</b><span>Fine-tune LLM</span><b>→</b><span>Next search generation</span>
+          </div>
+        </div>
+
+        <div class="paper-detail-footer">
+          <p><strong>Why it matters:</strong> the search operator itself improves instead of remaining fixed while the compute budget grows.</p>
+          <a href="https://arxiv.org/abs/2507.14172" target="_blank" rel="noreferrer">Read SOAR paper ↗</a>
+        </div>
+      </section>
+    </template>
+
+    <template id="paper-compressarc-template">
+      <section class="paper-detail">
+        <div class="paper-detail-overview">
+          <div>
+            <span class="detail-label">CORE IDEA</span>
+            <p>CompressARC treats solving as neural code golf: the best explanation is the shortest program that reconstructs the observed puzzle and sensibly fills its missing solution.</p>
+          </div>
+          <dl class="paper-facts">
+            <div><dt>Parameters</dt><dd>76K</dd></div>
+            <div><dt>Pretraining</dt><dd>None</dd></div>
+            <div><dt>Principle</dt><dd>MDL</dd></div>
+          </dl>
+        </div>
+
+        <div class="algorithm-panel">
+          <div class="algorithm-heading"><span>Algorithm flow</span><strong>Optimize one puzzle at inference time</strong></div>
+          <div class="program-flow six-step-flow" aria-label="CompressARC inference-time algorithm">
+            <div class="flow-node data-node"><small>PUZZLE P</small><strong>Mask test outputs</strong><span>Keep demonstrations observable</span></div>
+            <b class="flow-arrow">→</b>
+            <div class="flow-node process-node"><small>INITIALIZE</small><strong>θ, μ, Σ</strong><span>Equivariant network + latent distribution</span></div>
+            <b class="flow-arrow">→</b>
+            <div class="flow-node process-node"><small>SAMPLE</small><strong>z ~ N(μ, Σ)</strong><span>Generate a puzzle-shaped latent code</span></div>
+            <b class="flow-arrow">→</b>
+            <div class="flow-node process-node"><small>DECODE</small><strong>NNθ(z) → grids</strong><span>Reconstruct observed and missing cells</span></div>
+            <b class="flow-arrow">→</b>
+            <div class="flow-node decision-node"><small>MINIMIZE DESCRIPTION</small><strong>KL + cross-entropy</strong><span>Adam updates θ, μ and Σ</span></div>
+          </div>
+          <div class="flow-feedback"><span>≈2000 steps</span><b>↺</b><strong>Sample → decode → measure → optimize</strong></div>
+        </div>
+
+        <div class="paper-detail-footer">
+          <p><strong>Why it matters:</strong> useful abstraction can emerge while deliberately overfitting a compact model to only the puzzle being solved.</p>
+          <a href="https://arxiv.org/abs/2512.06104" target="_blank" rel="noreferrer">Read CompressARC paper ↗</a>
+        </div>
+      </section>
+    </template>
+
+    <template id="paper-arcnca-template">
+      <section class="paper-detail">
+        <div class="paper-detail-overview">
+          <div>
+            <span class="detail-label">CORE IDEA · OUR FOCUS</span>
+            <p>ARC-NCA trains a custom dynamical “program” for each task. All cells share local neural update rules; repeated interactions develop the input into a candidate output.</p>
+          </div>
+          <dl class="paper-facts">
+            <div><dt>Training</dt><dd>Per task</dd></div>
+            <div><dt>Examples</dt><dd>2–3</dd></div>
+            <div><dt>Iterations</dt><dd>3000</dd></div>
+          </dl>
+        </div>
+
+        <div class="algorithm-panel nca-algorithm-panel">
+          <div class="algorithm-heading"><span>EngramNCA training flow</span><strong>Development + error correction</strong></div>
+          <div class="program-flow nca-program-flow" aria-label="ARC-NCA training algorithm">
+            <div class="flow-node data-node"><small>ENCODE</small><strong>ARC grid → H×W×C</strong><span>Visible colors + hidden channels</span></div>
+            <b class="flow-arrow">→</b>
+            <div class="flow-node nca-gene-node"><small>STAGE 1 · GeneCA</small><strong>Grow primitives</strong><span>Local CNN updates public cell states</span></div>
+            <b class="flow-arrow">→</b>
+            <div class="flow-node nca-prop-node"><small>STAGE 2 · GenePropCA</small><strong>Regulate memory</strong><span>Propagate and activate private states</span></div>
+            <b class="flow-arrow">→</b>
+            <div class="flow-node process-node"><small>REPEAT N STEPS</small><strong>Develop candidate</strong><span>The same rules act across space and time</span></div>
+            <b class="flow-arrow">→</b>
+            <div class="flow-node decision-node"><small>COMPARE</small><strong>Pixel-wise MSE</strong><span>Visible final state versus target grid</span></div>
+          </div>
+          <div class="flow-feedback nca-feedback"><span>Backpropagation through time</span><b>↺</b><strong>Update GeneCA + GenePropCA parameters; return state to pool</strong></div>
+
+          <div class="nca-test-flow">
+            <span>After training</span><strong>Test input</strong><b>→</b><strong>Learned local dynamics</strong><b>→</b><strong>Candidate output</strong><b>→</b><strong>Exact verification</strong>
+          </div>
+        </div>
+
+        <div class="paper-detail-footer">
+          <p><strong>Physical interpretation:</strong> a high-dimensional lattice evolves under a learned local law; computation is the trajectory, not one feed-forward pass.</p>
+          <a href="https://etimush.github.io/ARC_NCA/" target="_blank" rel="noreferrer">Open ARC-NCA project ↗</a>
+        </div>
+      </section>
+    </template>
+
     <script>
 const slides = Array.from(document.querySelectorAll(".slide"));
 const previousButton = document.querySelector("#previous-button");
@@ -1326,8 +3050,14 @@ const overviewGrid = document.querySelector("#overview-grid");
 const overviewButton = document.querySelector("#overview-button");
 const closeOverviewButton = document.querySelector("#close-overview");
 const fullscreenButton = document.querySelector("#fullscreen-button");
+const paperModal = document.querySelector("#paper-modal");
+const paperDialogTitle = document.querySelector("#paper-dialog-title");
+const paperDialogAward = document.querySelector("#paper-dialog-award");
+const paperDialogContent = document.querySelector("#paper-dialog-content");
+const closePaperModalButton = document.querySelector("#close-paper-modal");
 
 let currentSlide = getSlideFromHash();
+let lastPaperTrigger = null;
 
 function getSlideFromHash() {
   const requestedSlide = Number(window.location.hash.slice(1));
@@ -1402,6 +3132,27 @@ function closeOverview() {
   overviewButton.focus();
 }
 
+function openPaperDetails(trigger) {
+  const template = document.querySelector(`#paper-${trigger.dataset.paperModal}-template`);
+  if (!template) return;
+
+  lastPaperTrigger = trigger;
+  paperDialogTitle.textContent = trigger.dataset.paperTitle;
+  paperDialogAward.textContent = trigger.dataset.paperAward;
+  paperDialogContent.replaceChildren(template.content.cloneNode(true));
+  paperDialogContent.scrollTop = 0;
+  paperModal.classList.add("is-open");
+  paperModal.setAttribute("aria-hidden", "false");
+  closePaperModalButton.focus();
+}
+
+function closePaperDetails() {
+  paperModal.classList.remove("is-open");
+  paperModal.setAttribute("aria-hidden", "true");
+  paperDialogContent.replaceChildren();
+  lastPaperTrigger?.focus();
+}
+
 async function toggleFullscreen() {
   try {
     if (!document.fullscreenElement) {
@@ -1419,6 +3170,15 @@ nextButton.addEventListener("click", () => goToSlide(currentSlide + 1));
 overviewButton.addEventListener("click", openOverview);
 closeOverviewButton.addEventListener("click", closeOverview);
 fullscreenButton.addEventListener("click", toggleFullscreen);
+closePaperModalButton.addEventListener("click", closePaperDetails);
+
+document.querySelectorAll("[data-paper-modal]").forEach((trigger) => {
+  trigger.addEventListener("click", () => openPaperDetails(trigger));
+});
+
+paperModal.addEventListener("click", (event) => {
+  if (event.target === paperModal) closePaperDetails();
+});
 
 document.addEventListener("fullscreenchange", () => {
   const isFullscreen = Boolean(document.fullscreenElement);
@@ -1426,12 +3186,17 @@ document.addEventListener("fullscreenchange", () => {
 });
 
 document.addEventListener("keydown", (event) => {
-  if (event.target.matches("button, a, input, textarea, select")) return;
+  if (paperModal.classList.contains("is-open")) {
+    if (event.key === "Escape") closePaperDetails();
+    return;
+  }
 
   if (overview.classList.contains("is-open")) {
     if (event.key === "Escape" || event.key.toLowerCase() === "o") closeOverview();
     return;
   }
+
+  if (event.target.matches("button, a, input, textarea, select")) return;
 
   if (["ArrowRight", "ArrowDown", "PageDown", " "].includes(event.key)) {
     event.preventDefault();
@@ -1469,6 +3234,7 @@ document.addEventListener("touchstart", (event) => {
 }, { passive: true });
 
 document.addEventListener("touchend", (event) => {
+  if (paperModal.classList.contains("is-open") || overview.classList.contains("is-open")) return;
   const distance = event.changedTouches[0].screenX - touchStartX;
   if (Math.abs(distance) < 60) return;
   goToSlide(currentSlide + (distance < 0 ? 1 : -1));
