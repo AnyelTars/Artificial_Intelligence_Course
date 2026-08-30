@@ -1,10 +1,10 @@
 <!doctype html>
-<html lang="es">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Plantilla de presentación HTML interactiva" />
-    <title>Presentación interactiva</title>
+    <meta name="description" content="ARC-AGI-2: benchmark, dataset structure, evaluation and why it is difficult" />
+    <title>ARC-AGI-2 · Quiz 01</title>
     <style>
 :root {
   --background: #090d12;
@@ -849,122 +849,446 @@ h2 span {
         <section class="slide title-slide is-active" data-title="Portada" aria-hidden="false">
           <div class="slide-content title-layout">
             <div>
-              <p class="eyebrow">QUIZ 01 · 2026</p>
-              <h1>Inteligencia<br /><span>Artificial</span></h1>
-              <p class="lead">Una presentación interactiva sobre ideas, modelos y aplicaciones.</p>
+              <p class="eyebrow">2026</p>
+              <h1>ARC Competition<br /><span>Overview &amp; Initial Ideas</span></h1>
+              <p class="lead">Abstraction and Reasoning Corpus for Artificial General Intelligence: what the benchmark measures, how it is evaluated and why it is hard.</p>
             </div>
 
             <div class="title-meta">
               <div>
-                <span>Presentado por</span>
-                <strong>Tu nombre</strong>
+                <span>Presented by</span>
+                <strong>Quray Potosi &amp; Angel Salazar</strong>
               </div>
               <div>
-                <span>Curso</span>
-                <strong>Nombre del curso</strong>
+                <span>Course</span>
+                <strong>Artificial Intelligence</strong>
               </div>
             </div>
           </div>
         </section>
 
-        <section class="slide" data-title="Idea principal" aria-hidden="true">
+        <section class="slide" data-title="What is ARC-AGI?" aria-hidden="true">
           <div class="slide-content split-layout">
             <div>
-              <p class="eyebrow">01 · CONTEXTO</p>
-              <h2>Una idea principal,<br /><span>explicada con claridad.</span></h2>
-              <p class="body-copy">Usa este espacio para introducir el concepto central. Mantén cada diapositiva enfocada en una sola idea y deja que la explicación oral aporte el detalle.</p>
+              <p class="eyebrow">01 · WHAT IS ARC-AGI?</p>
+              <h2>A benchmark for<br /><span>completely new problems.</span></h2>
+              <p class="body-copy">ARC-AGI evaluates whether an AI system can solve reasoning problems it has never seen. It is not primarily testing memorization, factual knowledge or language understanding, but <strong>fluid intelligence</strong>: looking at a few examples, discovering the abstract rule behind them and applying it to a new situation.</p>
             </div>
 
             <aside class="quote-card">
               <span class="quote-mark">“</span>
-              <blockquote>La simplicidad es la máxima sofisticación.</blockquote>
-              <cite>— Leonardo da Vinci</cite>
+              <blockquote>Examples → Infer an abstract rule → Apply it to a new input</blockquote>
+              <cite>— The central idea of ARC</cite>
             </aside>
           </div>
         </section>
 
-        <section class="slide" data-title="Tres conceptos" aria-hidden="true">
+        <section class="slide" data-title="Skill acquisition" aria-hidden="true">
           <div class="slide-content">
-            <p class="eyebrow">02 · FUNDAMENTOS</p>
-            <h2>Tres conceptos <span>esenciales</span></h2>
+            <p class="eyebrow">01 · WHAT IS ARC-AGI?</p>
+            <h2>Not memorization,<br /><span>skill acquisition</span></h2>
 
             <div class="card-grid">
               <article class="info-card">
                 <span class="card-number">01</span>
-                <h3>Datos</h3>
-                <p>La evidencia que permite encontrar patrones y entrenar modelos.</p>
+                <h3>Unique tasks</h3>
+                <p>Every ARC task is designed to be different, so solutions cannot be memorized task by task.</p>
               </article>
               <article class="info-card accent-card">
                 <span class="card-number">02</span>
-                <h3>Modelo</h3>
-                <p>Una representación que aprende relaciones para generar predicciones.</p>
+                <h3>New skills</h3>
+                <p>The goal is a system that acquires a new skill rapidly when it meets a new problem.</p>
               </article>
               <article class="info-card">
                 <span class="card-number">03</span>
-                <h3>Decisión</h3>
-                <p>El resultado que conecta el aprendizaje con una aplicación real.</p>
+                <h3>Efficiency</h3>
+                <p>Brute force may eventually find an answer, but exhaustive computation is not evidence of general intelligence.</p>
               </article>
             </div>
           </div>
         </section>
 
-        <section class="slide" data-title="Proceso" aria-hidden="true">
+        <section class="slide" data-title="Core Knowledge Priors" aria-hidden="true">
           <div class="slide-content">
-            <p class="eyebrow">03 · PROCESO</p>
-            <h2>De los datos al <span>resultado</span></h2>
+            <p class="eyebrow">01 · WHAT IS ARC-AGI?</p>
+            <h2>Minimal <span>prior knowledge</span></h2>
+
+            <div class="card-grid">
+              <article class="info-card">
+                <span class="card-number">01</span>
+                <h3>Objects</h3>
+                <p>Object persistence, connectivity, containment and boundaries.</p>
+              </article>
+              <article class="info-card accent-card">
+                <span class="card-number">02</span>
+                <h3>Space</h3>
+                <p>Relative position, symmetry, basic geometry and simple transformations.</p>
+              </article>
+              <article class="info-card">
+                <span class="card-number">03</span>
+                <h3>Quantity</h3>
+                <p>Counting and comparing amounts of elements.</p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="slide" data-title="ARC-AGI-2" aria-hidden="true">
+          <div class="slide-content split-layout">
+            <div>
+              <p class="eyebrow">01 · WHAT IS ARC-AGI?</p>
+              <h2>The second<br /><span>generation</span></h2>
+              <p class="body-copy">ARC-AGI-2 keeps the input–output grid format of ARC-AGI, but introduces harder tasks designed specifically to challenge modern reasoning systems. These elementary concepts matter because ARC tries to separate <strong>reasoning ability</strong> from specialized knowledge.</p>
+            </div>
+
+            <aside class="quote-card">
+              <span class="quote-mark">“</span>
+              <blockquote>Can an AI efficiently infer a new abstract skill and use it on a problem it has never encountered?</blockquote>
+              <cite>— The real question behind the benchmark</cite>
+            </aside>
+          </div>
+        </section>
+
+        <section class="slide" data-title="How a task works" aria-hidden="true">
+          <div class="slide-content split-layout">
+            <div>
+              <p class="eyebrow">02 · HOW A TASK WORKS</p>
+              <h2>Training examples,<br /><span>then a hidden test</span></h2>
+              <p class="body-copy">Every ARC-AGI-2 task is a small reasoning problem made of colored grids. A few demonstration pairs show the hidden transformation; then a new input arrives and the correct output is hidden. The solver has to generate the complete output grid.</p>
+            </div>
+
+            <aside class="quote-card">
+              <span class="quote-mark">“</span>
+              <blockquote>Input 1 → Output 1<br />Input 2 → Output 2<br />Input 3 → Output 3<br />New Input → ?</blockquote>
+              <cite>— Structure of a single task</cite>
+            </aside>
+          </div>
+        </section>
+
+        <section class="slide" data-title="Inferring the rule" aria-hidden="true">
+          <div class="slide-content split-layout">
+            <div>
+              <p class="eyebrow">02 · HOW A TASK WORKS</p>
+              <h2>The rule is <span>never given</span></h2>
+              <p class="body-copy">The AI has to infer which objects exist, which properties are relevant, what changed between input and output, which transformations were applied, in which order and under which conditions. The inferred rule must explain <strong>all</strong> the training examples.</p>
+            </div>
+
+            <aside class="quote-card">
+              <span class="quote-mark">“</span>
+              <blockquote>f(Input₁) = Output₁<br />f(Input₂) = Output₂<br />f(Test) = Prediction</blockquote>
+              <cite>— Discover the unknown transformation f</cite>
+            </aside>
+          </div>
+        </section>
+
+        <section class="slide" data-title="The grids" aria-hidden="true">
+          <div class="slide-content">
+            <p class="eyebrow">02 · HOW A TASK WORKS</p>
+            <h2>Anatomy of a <span>grid</span></h2>
+
+            <div class="card-grid">
+              <article class="info-card">
+                <span class="card-number">01</span>
+                <h3>0 – 9</h3>
+                <p>Cells hold integers from 0 to 9, conventionally shown as colors so humans can read the task.</p>
+              </article>
+              <article class="info-card accent-card">
+                <span class="card-number">02</span>
+                <h3>Up to 30×30</h3>
+                <p>Dimensions vary between tasks, and the output does not necessarily match the size of the input.</p>
+              </article>
+              <article class="info-card">
+                <span class="card-number">03</span>
+                <h3>No options</h3>
+                <p>This is not a multiple-choice problem: the solver constructs the whole output grid itself.</p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="slide" data-title="Dataset structure" aria-hidden="true">
+          <div class="slide-content">
+            <p class="eyebrow">03 · DATASET</p>
+            <h2>Four datasets, <span>one pipeline</span></h2>
 
             <ol class="process-list">
               <li>
                 <span class="process-number">1</span>
-                <div><strong>Observar</strong><small>Recolectar y comprender los datos.</small></div>
+                <div><strong>1000 Public Training</strong><small>Develop and train our solver. Completely public.</small></div>
               </li>
               <li>
                 <span class="process-number">2</span>
-                <div><strong>Aprender</strong><small>Ajustar el modelo a los patrones.</small></div>
+                <div><strong>120 Public Evaluation</strong><small>Measure generalization during development.</small></div>
               </li>
               <li>
                 <span class="process-number">3</span>
-                <div><strong>Evaluar</strong><small>Medir precisión, sesgos y límites.</small></div>
+                <div><strong>120 Semi-Private</strong><small>Hidden evaluation for the live leaderboards.</small></div>
               </li>
               <li>
                 <span class="process-number">4</span>
-                <div><strong>Aplicar</strong><small>Convertir la predicción en valor.</small></div>
+                <div><strong>120 Private</strong><small>Final hidden evaluation of the competition.</small></div>
               </li>
             </ol>
           </div>
         </section>
 
-        <section class="slide" data-title="Pregunta" aria-hidden="true">
-          <div class="slide-content quiz-layout">
+        <section class="slide" data-title="Public Training Set" aria-hidden="true">
+          <div class="slide-content split-layout">
             <div>
-              <p class="eyebrow">04 · INTERACCIÓN</p>
-              <h2>Pregunta para la <span>audiencia</span></h2>
-              <p class="question">¿Cuál es el elemento más importante para que un sistema de IA sea confiable?</p>
+              <p class="eyebrow">03 · DATASET</p>
+              <h2>1000 tasks to<br /><span>build the system</span></h2>
+              <p class="body-copy">The Training Set is intentionally <strong>not difficulty-calibrated</strong>: it ranges from simple to very hard. Its purpose is to expose the system to ARC's format and its Core Knowledge Priors, not to measure final performance. We can inspect these tasks and their solutions freely.</p>
             </div>
 
-            <div class="answers" role="group" aria-label="Opciones de respuesta">
-              <button class="answer" type="button" data-feedback="Los datos son esenciales, pero también deben evaluarse el modelo y su contexto.">
-                <span>A</span> Una gran cantidad de datos
-              </button>
-              <button class="answer" type="button" data-correct="true" data-feedback="¡Correcto! La evaluación continua integra calidad, contexto, desempeño y riesgos.">
-                <span>B</span> La evaluación continua
-              </button>
-              <button class="answer" type="button" data-feedback="La complejidad no garantiza confiabilidad; a menudo dificulta explicar el resultado.">
-                <span>C</span> El modelo más complejo
-              </button>
-              <p id="quiz-feedback" class="quiz-feedback" aria-live="polite">Selecciona una respuesta.</p>
+            <aside class="quote-card">
+              <span class="quote-mark">“</span>
+              <blockquote>Learn reusable reasoning mechanisms, not the answers themselves.</blockquote>
+              <cite>— Not a conventional supervised dataset</cite>
+            </aside>
+          </div>
+        </section>
+
+        <section class="slide" data-title="Evaluation sets" aria-hidden="true">
+          <div class="slide-content">
+            <p class="eyebrow">03 · DATASET</p>
+            <h2>Three evaluation <span>sets</span></h2>
+
+            <div class="card-grid">
+              <article class="info-card">
+                <span class="card-number">120 TASKS</span>
+                <h3>Public</h3>
+                <p>Public but for evaluation, not training. Human-calibrated: every task was solved pass@2 by at least two people.</p>
+              </article>
+              <article class="info-card accent-card">
+                <span class="card-number">120 TASKS</span>
+                <h3>Semi-Private</h3>
+                <p>Hidden from competitors; used for the live Kaggle and ARC Prize leaderboards. May have had limited exposure to third parties.</p>
+              </article>
+              <article class="info-card">
+                <span class="card-number">120 TASKS</span>
+                <h3>Private</h3>
+                <p>The most protected set, used for the final leaderboard. Not exposed to third parties: the strongest test of real generalization.</p>
+              </article>
             </div>
           </div>
         </section>
 
-        <section class="slide end-slide" data-title="Cierre" aria-hidden="true">
-          <div class="slide-content end-layout">
-            <p class="eyebrow">CONCLUSIÓN</p>
-            <h2>Gracias.</h2>
-            <p class="lead">¿Preguntas o comentarios?</p>
-            <a class="contact-link" href="mailto:tu.nombre@email.com">tu.nombre@email.com</a>
+        <section class="slide" data-title="Two meanings of train" aria-hidden="true">
+          <div class="slide-content split-layout">
+            <div>
+              <p class="eyebrow">03 · DATASET</p>
+              <h2>Two meanings of<br /><span>“training”</span></h2>
+              <p class="body-copy">At <strong>dataset level</strong>, the Public Training Set is 1000 complete ARC tasks used to develop our solver. At <strong>task level</strong>, <code>"train"</code> is the handful of demonstration input–output pairs stored inside one single task, next to its <code>"test"</code> input.</p>
+            </div>
+
+            <aside class="quote-card">
+              <span class="quote-mark">“</span>
+              <blockquote>1000 tasks to build the solver.<br />A few examples to solve each task.</blockquote>
+              <cite>— Dataset level vs. task level</cite>
+            </aside>
           </div>
         </section>
+
+        <section class="slide" data-title="Learning at test time" aria-hidden="true">
+          <div class="slide-content">
+            <p class="eyebrow">03 · DATASET</p>
+            <h2>Even a hidden task<br /><span>brings its own examples</span></h2>
+
+            <ol class="process-list">
+              <li>
+                <span class="process-number">A</span>
+                <div><strong>Input A → Output A</strong><small>Demonstration inside the unseen task.</small></div>
+              </li>
+              <li>
+                <span class="process-number">B</span>
+                <div><strong>Input B → Output B</strong><small>Second demonstration of the same rule.</small></div>
+              </li>
+              <li>
+                <span class="process-number">C</span>
+                <div><strong>Input C → Output C</strong><small>Third demonstration of the same rule.</small></div>
+              </li>
+              <li>
+                <span class="process-number">D</span>
+                <div><strong>Input D → ?</strong><small>The solver adapts at inference time and predicts.</small></div>
+              </li>
+            </ol>
+          </div>
+        </section>
+
+        <section class="slide" data-title="Objective" aria-hidden="true">
+          <div class="slide-content split-layout">
+            <div>
+              <p class="eyebrow">04 · OBJECTIVE</p>
+              <h2>Solve tasks<br /><span>never seen before</span></h2>
+              <p class="body-copy">The competition objective is a system general enough to correctly solve a very large fraction of the hidden evaluation tasks. ARC Prize defines the major target of the benchmark.</p>
+            </div>
+
+            <aside class="quote-card">
+              <span class="quote-mark">“</span>
+              <blockquote>85% accuracy</blockquote>
+              <cite>— ARC Prize target</cite>
+            </aside>
+          </div>
+        </section>
+
+        <section class="slide" data-title="Competition rules" aria-hidden="true">
+          <div class="slide-content">
+            <p class="eyebrow">04 · RULES</p>
+            <h2>How the <span>scoring works</span></h2>
+
+            <div class="card-grid">
+              <article class="info-card">
+                <span class="card-number">01</span>
+                <h3>Pass@2</h3>
+                <p>Two predicted grids per test input. The task counts as solved if either one matches exactly — the same bar used to calibrate humans.</p>
+              </article>
+              <article class="info-card accent-card">
+                <span class="card-number">02</span>
+                <h3>Efficiency counts</h3>
+                <p>Log-linear scaling from bigger models is not enough to beat ARC-AGI-2. Cost becomes a primary metric alongside accuracy.</p>
+              </article>
+              <article class="info-card">
+                <span class="card-number">03</span>
+                <h3>Two leaderboards</h3>
+                <p>Semi-Private drives the live Kaggle / ARC Prize leaderboard; Private decides the final ranking, so overfitting to public tasks does not pay off.</p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="slide" data-title="Exact evaluation" aria-hidden="true">
+          <div class="slide-content">
+            <p class="eyebrow">04 · EVALUATION</p>
+            <h2>Exact output <span>reconstruction</span></h2>
+
+            <div class="card-grid">
+              <article class="info-card">
+                <span class="card-number">GROUND TRUTH</span>
+                <h3>0 2 2<br />0 2 0<br />0 2 2</h3>
+                <p>The hidden output the prediction is compared against.</p>
+              </article>
+              <article class="info-card accent-card">
+                <span class="card-number">CORRECT</span>
+                <h3>0 2 2<br />0 2 0<br />0 2 2</h3>
+                <p>Dimensions, positions and every color match exactly.</p>
+              </article>
+              <article class="info-card">
+                <span class="card-number">INCORRECT</span>
+                <h3>0 2 2<br />0 2 0<br />0 2 1</h3>
+                <p>One single wrong cell and the whole answer scores nothing.</p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="slide" data-title="Human calibration" aria-hidden="true">
+          <div class="slide-content split-layout">
+            <div>
+              <p class="eyebrow">04 · EVALUATION</p>
+              <h2>Hard for AI,<br /><span>solvable by humans</span></h2>
+              <p class="body-copy">The Public, Semi-Private and Private sets were built so that their human-facing difficulty distributions are statistically similar. More than 400 participants took part in the calibration process. A solver can understand a task partially and still get no credit at all.</p>
+            </div>
+
+            <aside class="quote-card">
+              <span class="quote-mark">“</span>
+              <blockquote>100% of the final tasks were solved by at least two humans in fewer than two attempts.</blockquote>
+              <cite>— ARC-AGI-2 official page</cite>
+            </aside>
+          </div>
+        </section>
+
+        <section class="slide" data-title="Why is it difficult?" aria-hidden="true">
+          <div class="slide-content">
+            <p class="eyebrow">05 · DIFFICULTY</p>
+            <h2>Why is ARC-AGI-2 <span>difficult?</span></h2>
+
+            <div class="card-grid">
+              <article class="info-card">
+                <span class="card-number">01</span>
+                <h3>Compositional</h3>
+                <p>Several interacting rules at once, instead of one single transformation such as “move all objects downward”.</p>
+              </article>
+              <article class="info-card accent-card">
+                <span class="card-number">02</span>
+                <h3>Multi-step</h3>
+                <p>Transformations are sequential: the state produced by one operation decides what must happen next.</p>
+              </article>
+              <article class="info-card">
+                <span class="card-number">03</span>
+                <h3>Contextual</h3>
+                <p>Red border → move left; blue border → move right. The hard part is discovering <em>when</em> each rule applies.</p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="slide" data-title="Compositional chain" aria-hidden="true">
+          <div class="slide-content">
+            <p class="eyebrow">05 · DIFFICULTY</p>
+            <h2>One task, <span>many operations</span></h2>
+
+            <ol class="process-list">
+              <li>
+                <span class="process-number">1</span>
+                <div><strong>Detect</strong><small>Find the objects and identify their shapes.</small></div>
+              </li>
+              <li>
+                <span class="process-number">2</span>
+                <div><strong>Crop</strong><small>Isolate the relevant region of the grid.</small></div>
+              </li>
+              <li>
+                <span class="process-number">3</span>
+                <div><strong>Match</strong><small>Resize the objects and pair them with their shapes.</small></div>
+              </li>
+              <li>
+                <span class="process-number">4</span>
+                <div><strong>Place</strong><small>Put every object in its new position.</small></div>
+              </li>
+            </ol>
+          </div>
+        </section>
+
+        <section class="slide" data-title="Symbols and novelty" aria-hidden="true">
+          <div class="slide-content">
+            <p class="eyebrow">05 · DIFFICULTY</p>
+            <h2>Beyond visual <span>patterns</span></h2>
+
+            <div class="card-grid">
+              <article class="info-card">
+                <span class="card-number">01</span>
+                <h3>Symbols</h3>
+                <p>A shape may encode a number, a direction or a category. Its meaning is defined by the task itself and must be inferred on the fly.</p>
+              </article>
+              <article class="info-card accent-card">
+                <span class="card-number">02</span>
+                <h3>Novelty</h3>
+                <p>Tasks are deliberately unique, so learned shortcuts stop working: “what is happening here?” replaces “have I seen this before?”.</p>
+              </article>
+              <article class="info-card">
+                <span class="card-number">03</span>
+                <h3>No brute force</h3>
+                <p>Tasks solvable by naïve program search were removed. The benchmark measures efficient abstraction, not raw computation.</p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="slide" data-title="Nuestro problema" aria-hidden="true">
+          <div class="slide-content split-layout">
+            <div>
+              <p class="eyebrow">06 · TRANSICIÓN</p>
+              <h2>So, our <span>problem</span></h2>
+              <p class="body-copy">ARC-AGI-2 requires object detection, abstract representation, symbolic interpretation, conditional rules, multiple transformations, sequential reasoning and adaptation to completely new tasks.</p>
+            </div>
+
+            <aside class="quote-card">
+              <span class="quote-mark">“</span>
+              <blockquote>How can we design a solver that discovers these structures from only a few examples?</blockquote>
+              <cite>— Our initial approach starts here</cite>
+            </aside>
+          </div>
+        </section>
+
       </div>
 
       <nav class="controls" aria-label="Navegación entre diapositivas">
